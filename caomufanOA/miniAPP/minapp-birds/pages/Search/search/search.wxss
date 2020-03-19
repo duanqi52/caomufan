@@ -1,0 +1,274 @@
+/* pages/search/search.wxss */
+@import '../../../lib/style/icon-sousuo.wxss';
+@import '../../../lib/style/icon-qingkong.wxss';
+@import '../../../lib/style/icon-qingkong2.wxss';
+@import '../../../lib/style/icon-shuaxin.wxss';
+
+
+/* 搜索框样式 */
+.SearchBox{
+width: 660rpx;
+margin: 42rpx auto 0;
+}
+.SearchLogo{
+
+}
+.SearchLogo image{
+  width: 100%;
+  height: 115rpx;
+  vertical-align:middle;
+}
+
+.SearchInputBox{
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #fff;
+  border:1px solid #dcdcdc;
+  border-radius: 45rpx;
+  display: flex;
+  position: relative;
+  overflow: hidden
+}
+.SearchInputBox .searchIcon{
+width: 80rpx;
+text-align: right;
+}
+.SearchInputBox .searchIcon icon{
+font-size: 34rpx;
+color: #888888;
+}
+
+.SearchInputBox .searchInput{
+  width: 380rpx;
+  padding: 0 10rpx;
+}
+.SearchInputBox .searchInput input{
+  height: 100%;
+}
+
+.SearchInputBox .NullIcon{
+  font-size: 34rpx;
+}
+.SearchInputBox .NullIcon button{
+  background: #fff;
+  padding: 0;
+  border: none;
+
+}
+.SearchInputBox .NullIcon button::after{
+  border: none
+}
+.SearchInputBox .searchBtn{
+  position: absolute;
+  right: -2rpx;
+  top: -0rpx;
+}
+.SearchInputBox .searchBtn .searchBtnShow{
+  background: #74b113;
+  width: 140rpx;
+  text-align: center;
+  height: 92rpx;
+  border-radius: 46rpx;
+  line-height: 92rpx;
+  color: #fff;
+  font-size: 34rpx;
+}
+.SearchInputBox .searchBtn .searchBtnShow button::after{
+  border: none
+}
+
+
+
+/* 部分搜索列表的样式 */
+.ListIteam{
+  margin-top:24rpx;
+  background: #fff;
+  width: 700rpx;
+  
+}
+.TitleIteam{
+  display: block;
+  color: #888888;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  /* padding: 0 18rpx; */
+  border-bottom: 1rpx solid #dcdcdc;
+  letter-spacing:2.8rpx;
+}
+
+
+/* 生僻字搜索 */
+.FontListBox{
+  width: 100%;
+  /* padding:0 25rpx; */
+}
+.FontTitle{
+  margin:0 25rpx;
+}
+.FontTitle text{
+  padding:0 18rpx;
+}
+.FontBox{
+ padding:3rpx 0 35rpx 0; 
+ 
+}
+.FontBox .FontList{
+  display: flex;
+   /* margin-top: 0rpx; */
+   flex-wrap: wrap ;
+   padding: 0 21rpx;
+   /* padding: 0 7rpx; */
+   
+}
+.FontBox .FontList .FontIteam{
+  display: block;
+padding: 16rpx 21.8rpx;
+background: #f1f1f1;
+color: #313233;
+font-size: 34rpx; 
+  margin-left: 22rpx;
+  margin-top: 22rpx;
+    /* padding: 0 15.5rpx; */
+
+}
+
+
+
+
+
+/* 历史搜索 */
+.HistooryListBox{
+  width: 100%;
+}
+.HistoryTitle{
+  margin:0 25rpx;
+   display: flex;
+   justify-content:space-between;
+}
+.HistoryTitle text{
+  padding:0 18rpx;
+}
+.HistoryTitleBtn{
+ padding:0 18rpx;
+ color: #74b113;
+}
+
+.HistoryList {
+  
+   margin-top: 0rpx;
+   padding: 0 21rpx;
+   height: 125rpx;
+   overflow: hidden;
+   
+}
+.HistoryList .HistoryBox{
+  display: flex;
+  flex-wrap: wrap ;
+}
+
+.HistoryList .HistoryIteamBox{
+  display: inline-block;
+   
+    margin-top: 28rpx;
+  margin-left: 24rpx;
+
+  background: #f1f1f1;
+  height: 70rpx;
+  line-height: 70rpx;
+ padding: 0 20rpx;
+  max-width: 220rpx;
+  overflow:hideen;
+ 
+}
+
+.HistoryList  .HistoryIteamBox .HistoryIteam{
+ 
+  letter-spacing:4rpx;
+  color: #313233;
+  
+  border-radius: 5rpx;
+ 
+  
+}
+.HistoryList  .HistoryIteamBox .HistoryIteam text{
+display: block;
+    font-size: 34rpx;
+  
+     height: 70rpx;
+  line-height: 70rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+
+  
+}
+
+
+
+
+/* 热门搜索 */
+.PopularListBox{
+  width: 100%;
+  padding: 0 0 20rpx 0
+}
+.PopularTitle{
+  margin:0 25rpx;
+  display: flex;
+  justify-content:space-between;
+}
+.PopularTitle text{
+  padding:0 18rpx;
+}
+
+.PopularTitleBtn{
+ padding:0 18rpx;
+ color: #74b113;
+}
+
+.PopularList{
+  padding: 0 20rpx;
+}
+
+
+.PopularList .PopularListShow{
+   display: inline-flex;
+   margin-top: 0rpx;
+    flex-wrap: wrap ;
+   padding: 0 0rpx;
+}
+.PopularList .PopularListShow .PopularIteamBox{
+  display: inline-block;
+   
+    margin-top: 28rpx;
+  margin-left: 24rpx;
+
+  background: #f1f1f1;
+  height: 70rpx;
+  line-height: 70rpx;
+ padding: 0 20rpx;
+  max-width: 220rpx;
+  overflow:hideen;
+ 
+}
+
+.PopularList .PopularListShow .PopularIteamBox .PopularIteam{
+ 
+  letter-spacing:4rpx;
+  color: #313233;
+  
+  border-radius: 5rpx;
+ 
+  
+}
+.PopularList .PopularListShow .PopularIteamBox .PopularIteam text{
+display: block;
+    font-size: 34rpx;
+  
+     height: 70rpx;
+  line-height: 70rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow:ellipsis;
+
+  
+}

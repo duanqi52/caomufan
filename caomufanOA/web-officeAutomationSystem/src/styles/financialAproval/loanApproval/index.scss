@@ -1,0 +1,167 @@
+//部门人员列表上部分按钮
+.companyTitle{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 0 0 30px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  .companyName{
+
+  }
+  .companyBtnBox{
+    padding-right: 30px;
+    display: flex;
+    .companyBtn{
+      cursor: pointer;
+      margin-left: 10px;
+      a{
+        background: #3b9414;
+        padding: 8px 10px;
+        color: #fff;
+        border-radius: 5px;
+        i{
+          margin-right: 5px;
+          font-size: 24px;
+          vertical-align: middle;
+          line-height: 1px;
+        }
+      }
+    }
+  }
+
+}
+
+
+//搜索列表
+.searchList{
+  padding: 10px 0;
+  .searchListForm{
+    display: flex;
+    flex-wrap: wrap;
+    .companyItem,.el-form-item{
+      width: 500px;
+      label{
+        font-size: 16px;
+      }
+      .el-select{
+        width: 100%;
+      }
+      .el-date-editor.el-input, .el-date-editor.el-input__inner{
+        width: 100%;
+      }
+    }
+  }
+}
+
+//列表展示界面
+.listShowBox{
+  padding: 0 30px;
+  margin: 15px 0;
+
+  //标题
+  .listTitleBox{
+    //display: flex;
+    //height: 60px;
+    padding: 10px 0;
+    align-items: center;
+    background: #f0f5ee;
+    font-size: 16px;
+    font-weight: bold;
+    .titleItem{
+      //min-width: 119px;
+      text-align: center;
+      //height: 40px;
+      //line-height: 40px;
+      border-left: 1px solid #ddd;
+      height: 60px;
+      padding: 10px 15px;
+      i{
+        font-size: 17px;
+      }
+    }
+    .titleItem:first-child{
+      border-left: 1px solid #f0f5ee;
+    }
+  }
+  //内容
+  .listItem{
+    //display: flex;
+    height: 60px;
+    align-items: center;
+    cursor: pointer;
+    .listItemShow{
+      //min-width: 120px;
+      padding: 10px 5px;
+      text-align: center;
+      font-size: 16px;
+
+    }
+    .listItemStatus{
+      span{
+        display: block;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+        background: #fff;
+        margin: 0 auto;
+      }
+    }
+  }
+  .listItem:nth-child(even){
+    background:#f9f9f9;
+  }
+  .setGreen{
+    color: #4ca824;
+    .listItemStatus{
+      span{
+        background: #4ca824;
+      }
+    }
+  }
+  .setGrey{
+    color: #bbbbbb;
+    .listItemStatus{
+      span{
+        background: #bbbbbb;
+      }
+    }
+  }
+
+
+  .item1{
+    width: 108px;
+  }
+  .item2{
+    width: 162px;
+  }
+  .item3{
+    width: 216px;
+  }
+  .item4{
+    width: 238px;
+  }
+  .item5{
+    width: 220px;
+  }
+  .item6{
+    width: 244px;
+  }
+  .item7{
+    width: 180px;
+  }
+  .item8{
+    width: 170px;
+  }
+  .item9{
+    width: 110px;
+  }
+}
+
+
+.pageNumBox{
+  margin: 20px 10px;
+  display: flex;
+  justify-content: flex-end;
+}

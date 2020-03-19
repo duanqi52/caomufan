@@ -1,0 +1,99 @@
+<!--pages/searchList/searchlist.wxml-->
+<view class="Body">
+
+  <!-- 输入框 -->
+  <view class="SearchBox">
+    <view class="SearchBoxBg">
+      <form bindsubmit="formSubmit" bindreset="formReset" >
+        <view class="SearchLogo">
+          <image src="../../../images/search/SearchLogo.png"></image>
+        </view>
+        <view class="SearchInputBox" bindtap="focusSearch">
+          <view class="searchIcon">
+            <icon class="iconfont icon-sousuo"></icon>
+          </view>
+          <view class="searchInput" >
+            <!-- <input 
+            name='name'  
+            placeholder="输入鸟名简拼/中文/英文" 
+            value="{{searchVal}}" 
+            bindinput='changeSearch' 
+            bindfocus='focusSearch' 
+            bindconfirm="formSubmit"></input> -->
+            {{searchVal}}
+          </view>
+          <view class="NullIcon">
+            <!-- <button formType="reset" >
+              <icon formType="reset" class="iconfont icon-qingkong" style="color:#ddd"></icon>
+            </button>   -->
+             <!-- <button  >
+              <icon  class="iconfont icon-qingkong" style="color:#ddd"></icon>
+            </button>         -->
+          </view>
+          <view class="searchBtn">
+            <!-- <navigator url="/pages/searchList/searchlist" hover-class="none"> -->
+              <!-- <button class="searchBtnShow" formType="submit">
+                <view >搜索</view>
+              </button> -->
+              <button class="searchBtnShow" >
+                <view >搜索</view>
+              </button>
+            <!-- </navigator> -->
+          </view>      
+        </view>
+      </form>      
+    </view>
+    
+  </view>
+
+  <!-- 搜索列表 -->
+  <view class="searchListShow" hidden="{{listStatus}}">
+    <!-- <scroll-view 
+    bindscrolltoupper='topLoad' 
+    bindscrolltolower='bottpmLoad'
+    scroll-y="true" 
+    class="ListBoX " style="height:{{listHeight}}px"> -->
+    <!-- 搜索列表 -->
+    <scroll-view 
+      scroll-y="true" 
+      class="ListBoX " style="height:{{listHeight}}px">
+      <view class="ListBg">
+          <!-- 展示列表 -->
+          <view class="ListShowBox clearfix" >
+            <block wx:for='{{showList}}' wx:key='{{index}}' >
+            <navigator url="/pages/Illustrated/BirdData/BirdData?birdID={{item.birdID}}" hover-class="none">
+                <view class="ListShowItem ">             
+                    <view class="ListShowImage">
+                      <image wx:if='{{item.img==""||item.img==null}}' src="../../../images/searchlist/nullImg.png"></image>
+                      <image wx:else src="{{item.img}}"></image>
+                    </view>
+                    <view class="ListShowData">
+                      <view class="ListShowName">
+                        <text>{{item.birdName}}</text>
+                      </view>
+                      <view  class="ListShowEnName"> 
+                        <text>{{item.scientificName}}</text>
+                      </view>
+                      <view class="ListShowLaName">
+                        <text>{{item.anotherName}}</text>
+                      </view>
+                    </view>                
+                </view> 
+              </navigator>  
+            </block>    
+            
+            <!-- 当列表为空时显示结果 -->
+            <view class="noListShow" wx:if='{{showList.length==0}}' style="">
+              <text>没有搜索到相关结果</text>
+            </view>   
+          </view>
+
+          
+
+      </view>
+
+    </scroll-view>
+  </view>
+  
+
+</view>

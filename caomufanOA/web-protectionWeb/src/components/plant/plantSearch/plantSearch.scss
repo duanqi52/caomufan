@@ -1,0 +1,60 @@
+.showListDataBox{
+  width: 100%;
+  height: 100%;
+  background: #e9e9e9;
+  overflow: auto;
+
+
+   //搜索列表展示
+  .searchListShow{
+
+    padding: 20px 0 20px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    .searchItem{
+      margin: 0 20px 20px 0;
+      width: 510px;
+      height: 140px;
+      background: #fff;
+      display: flex;
+
+      .searchImg{
+        width: 230px;
+        height: 100%;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .searchDataShow{
+        padding: 20px 20px 0 20px;
+        font-size: 16px;
+        .searchItemName{
+          font-size: 16px;
+          line-height: 30px;
+          width: 250px;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+        .searchItemEnName{
+          color: #888888;
+          font-style: italic;
+          line-height: 40px;
+          width: 250px;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+        .searchItemText{
+          color: #888888;
+          width: 250px;
+          overflow: hidden;
+          text-overflow:ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}
+.showListDataBox::-webkit-scrollbar {display:none}

@@ -1,0 +1,86 @@
+
+$initBG:#4a9a38;//基础背景颜色
+$initFontColor:#fff;//基础字体颜色
+$fs:20px;//一般字体大小
+
+.BodyShow{
+  background-color: $initBG;
+  background-image: url("../../assets/images/login/bg.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.loginBox{
+  width: 440px;
+  background: #fff;
+  height: 560px;
+  .loginTitle{
+    height: 100px;
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    color: #4ca824;
+  }
+  .loginShowBox{
+    height: 360px;
+    .loginItem {
+      width: 330px;
+      margin: 0 auto;
+    }
+    .loginWechat{
+      .wx_login{
+        width: 300px;
+        margin:  0 auto;
+      }
+    }
+    .loginNumber{
+      padding: 40px 0;
+      .formItem{
+        display: flex;
+        height: 80px;
+        line-height: 80px;
+        .formItemName{
+          width: 55px;
+          font-size: $fs;
+        }
+        .formItemInput{
+          width: 275px;
+          height: 50px;
+          input{
+            height: 50px;
+          }
+        }
+        a{
+          margin: 30px 0 0 0;
+          font-size: 20px;
+          width: 100%;
+          height: 50px;
+          line-height: 50px;
+          text-align: center;
+          background: $initBG;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .loginChange{
+    height: 100px;
+    font-size: $fs;
+    line-height: 100px;
+    text-align: center;
+    span{
+      color: #4ca824;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

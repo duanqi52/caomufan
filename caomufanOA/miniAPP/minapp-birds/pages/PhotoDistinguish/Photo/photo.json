@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "LoadigBird":"/components/LoadingBird/loadingbird"
+  },
+  "navigationBarTitleText": "拍照识鸟"
+}

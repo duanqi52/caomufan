@@ -1,0 +1,187 @@
+/* pages/AudioDistinguish/AudioResult/audioresult.wxss */
+.Body{
+	background: #f1f1f1;
+	position: relative;
+  overflow: hidden
+}
+.TopData{
+	background: #000;
+	height: 350rpx;
+	position: relative;
+	overflow: hidden;
+}
+.TopData .TopImage{
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	height: 350rpx;
+	top: 0;
+	z-index: 99;
+}
+.TopData .TopImage image{
+	height: 350rpx;
+	width: 360rpx;
+}
+.TopData .TopImageBg{
+	position: absolute;
+	height: 350rpx;
+	width: 100%;
+	top: 0;
+	z-index: 9;
+}
+.TopData .TopImageBg image{
+	width: 100%;
+	/* opacity: 0.2; */
+	/* filter: blur(5px); */
+}
+.BgBox{
+  z-index: 9999
+}
+
+.ShowImage{
+  z-index: 2
+}
+
+/* 数据展示列表 */
+.DataList{
+	
+}
+.ListShowBox{
+	/* padding-left: 44rpx; */
+	padding-top: 45rpx;
+	
+}
+.scroll-view_H{
+	display: flex;
+	  white-space: nowrap;
+	  
+}
+
+.ListShowBox .DataItem {
+	width: 630rpx;
+	background: #fff;
+	height: 630rpx;
+	border-radius: 30rpx;
+	margin-right: 34rpx;
+	display: inline-block;
+	
+	 
+}
+.ListShowBox .DataItem:first-child{
+	margin-left: 34rpx;
+}
+
+.DataPhottBox{
+	
+	position: relative;
+	width: 316rpx;
+	height: 316rpx;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 50rpx auto 0 auto;
+	
+	}
+.DataPhottBox .dataPhoto{
+	
+}
+.DataPhottBox  .dataPhoto image{
+	width: 316rpx;
+	height: 316rpx;
+}
+.DataPhottBox .dataMore{
+	position: absolute;
+	bottom:0;
+	width: 316rpx;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.8);
+	color: #fff;
+	height: 70rpx;
+	line-height: 60rpx;
+	font-size: 28rpx;
+	
+}
+
+
+
+.DataShow{
+	display: flex;
+	padding: 0 55rpx;
+	justify-content:space-between;
+	margin-top: 65rpx;
+}
+
+.DataShow .DataNameShow{
+	width: 250rpx;
+	
+}
+.DataShow .DataNameShow .DataNameC{
+	font-size: 36rpx;
+}
+.DataShow .DataNameShow .DataNameEn{
+	margin: 10rpx 0;
+	font-size: 28rpx;
+	width: 100%;
+	height: 70rpx;
+	line-height: 35rpx;
+	white-space: normal;
+		word-wrap: break-word;
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 2;
+		font-style: italic
+}
+.DataShow .DataNameShow .DataNameEn text{
+	font-size: 28rpx;
+	width: 100%;
+
+}
+
+.DataShow .DataNumber{
+	width: 250rpx;
+	text-align: center;
+}
+
+.DataShow .DataNumber .NumberTitle{
+	color: #888888;
+	font-size: 36rpx;
+}
+
+.DataShow .DataNumber .NumberShow{
+	font-size: 72rpx;
+	color: #74b113;
+}
+
+
+
+/* 炫耀按钮 */
+.BottomBtn{
+	padding: 45rpx 44rpx;
+	width: 662rpx;
+	position: absolute;
+	bottom: 0;
+}
+.BottomBtn button{
+	width: 662rpx;
+	background: #74b113;
+	color: #fff;
+	height: 90rpx;
+	font-size: 34rpx;
+}
+
+
+
+
+
+
+
+
+
+
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+    display: none;
+  }

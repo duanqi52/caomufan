@@ -1,0 +1,313 @@
+/* pages/Illustrated/BirdData/BirdData.wxss */
+@import '../../../lib/style/icon-shengyin';
+@import '../../../lib/style/icon-fenxiang';
+
+
+/* 轮播页面 */
+page{
+	background: #f1f1f1;
+}
+
+.NavBox{
+	width: 100%;
+	height: 480rpx;
+	
+	}
+	
+.NavBox .NavImage{
+		width: 100%;
+		height:100%;
+}
+.NavBox .NavImage image{
+		width: 100%;
+		height:100%;
+}
+
+/* 名片 */
+.ShowMeBox{
+	display: flex;
+	padding: 0 45rpx;
+	
+	background: #fff;
+	margin-bottom: 30rpx;
+	}
+	.ShowMeLeft{
+		margin: 13rpx 0 30rpx 0;
+		width: 585rpx;
+	}
+	
+	.ShowMeLeft text{
+		line-height: 66rpx;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		text-indent :3.7rpx;
+		font-size: 38rpx;
+		color: #313233;
+	}
+	.ShowMeLeft .EnText{
+		line-height: 28rpx;
+		font-style:oblique;
+		font-size: 27rpx;
+		text-indent :2.7rpx;
+	}
+	.ShowMeRight{
+		height: 100%;
+		margin-top: 50rpx;
+    justify-content: center;
+    align-items: center;
+    width: 110rpx
+
+	}
+	.ShowMeRight button{
+		border:none;
+		background: #fff;
+		}
+	.ShowMeRight button::after{
+	  border: none
+	}
+		
+	
+	.ShowMeRight image{
+		display: inline-block;
+		width: 80rpx;
+		height: 80rpx;
+		color: #74b113;
+		vertical-align: middle;
+			box-sizing:  border-box;
+	}
+	
+	
+	/* 物种分类 */
+	.ClassBox{
+		background: #fff;
+		padding: 0 45rpx;
+		margin-bottom: 30rpx;
+	}
+	
+	.ClassTitleBox{
+		padding: 30rpx 0 13rpx 0;
+	}
+	.ClassTitleBox .ClassTitle{
+		background: #9ac754;
+		padding: 0 20rpx;
+		
+		display:inline-block;
+		font-size: 34rpx;
+		line-height: 50rpx;
+		border-radius: 10rpx;
+		color: #fff;
+	}
+	
+	.ClassListBox{
+		display: flex;
+		padding: 0 0 25rpx 0;
+	}
+	.ClassLeft{
+		width: 585rpx;
+	}
+	
+	.ClassLeft .ClassLeftItem{
+		display: flex;
+		padding: 2px 0;
+		font-size: 34rpx;
+	}
+	
+	.ClassLeft .ClassLeftItem .ClassLeftItemName{
+		width: 110rpx;
+		color:#888888;
+		
+	}
+	.ClassLeft .ClassLeftItem .ClassLeftItemShow{
+		width: 400rpx;
+		color: #313233;
+	}
+	
+	.ClassRight{
+		height: 100%;
+		justify-content: center;
+		 align-items: center;
+		 position: relative;
+		 width:86rpx;
+		vertical-align:middle;
+	}
+	.ClassRight image{
+		position: absolute;
+		z-index: 99;
+		
+		width: 78rpx;
+		height: 78rpx;
+		color: #74b113;
+		top:4rpx;
+		left: 4rpx;
+	}
+	.progress_box{
+	position: absolute;
+	z-index: 9;
+	
+	top: 0;
+	left: 0;
+	position: relative;
+	  width:86rpx;
+	  height: 86rpx;  
+	
+	}
+	
+	.progress_canvas{ 
+		position: absolute;
+		top: 0;
+		left: 0;
+	  width:90rpx;
+	  height: 90rpx; 
+	} 
+	.cavasbottopm{
+		z-index: 9;
+		}
+	.cavastop{
+		z-index: 99;
+		}
+	
+	
+	
+	
+	  
+	/* 保护等级 */
+	
+	.LeverBox{
+		background: #fff;
+		padding: 0 45rpx;
+		margin-bottom: 30rpx;
+		
+		}
+	.LeverTitleBox{
+		padding: 30rpx 0 13rpx 0;
+	}
+	.LeverTitleBox .LeverTitle{
+		background: #9ac754;
+		padding: 0 20rpx;
+		
+		display:inline-block;
+		font-size: 34rpx;
+		line-height: 50rpx;
+		border-radius: 10rpx;
+		color: #fff;
+	}	
+	.LeverListBox{
+	
+		padding: 0 0 25rpx 0;
+	}	
+	
+	.LeverListBox .LeverItem{
+		display: flex;
+		padding: 5px 0;		
+		 align-items: center;
+		 font-size: 34rpx;
+	}
+	
+	.LeverListBox .LeverItem .LeverItemName{
+		width: 230rpx;
+		color:#888888;
+		padding-right: 60rpx;
+		line-height: 38rpx;	
+	}
+	.LeverListBox .LeverItem .LeverItemShow{
+		width: 300rpx;
+		color: #313233;
+		
+	}
+
+	
+	
+	/* 详细内容 */
+	.DataBox{
+		background: #fff;
+	
+		margin-bottom: 30rpx;
+		
+	}
+	
+	.DataTitleBox{
+		padding: 30rpx 45rpx 20rpx 45rpx;
+	}
+	
+	.DataTitle{
+		background: #9ac754;
+		padding: 0 20rpx;
+		
+		display:inline-block;
+		font-size: 34rpx;
+		line-height: 50rpx;
+		border-radius: 10rpx;
+		color: #fff;
+	}
+	
+	.DataListBox{
+		
+	}
+	.DataItem{
+		position: relative;
+		width: 220rpx;
+	}
+	.DataItem .DataItemName{
+		width: 220rpx;
+		border-bottom: 1px solid #9ac754;
+		height: 50rpx;
+	}
+	.DataItem .DataItemName .DataIteamTxt{
+		padding: 0 0 0 45rpx;
+		color:#9ac754 ;
+			
+	}
+	.DataItem .DataItemShow{
+		padding:30rpx  45rpx;
+		width: 660rpx;
+		font-size: 28rpx;
+	
+	}
+	.DataItem .DataItemShow text{
+		
+		line-height: 38rpx;
+	}
+	.DataItem .DataIteamImg{
+		height: 68rpx;
+		position: absolute;
+		right: -5rpx;
+		top: 2rpx;
+	}
+	.DataItem .DataIteamImg image{
+		height: 68rpx;
+		width: 36rpx;
+	}
+	
+	
+	
+	
+/* 	
+	
+.right{
+		position:absolute;
+		border-radius:50%;
+		width:80rpx;
+		height:80rpx;
+		top:0rpx;
+		left: -1rpx;
+		z-index: 9;
+	      
+	      background-color:white;
+	      clip:rect(auto,auto,auto,40rpx);
+	      background-color:red;
+	      
+	  }
+	  .left{
+		  position:absolute;
+		  border-radius:50%;
+		 width:80rpx;
+		 height:80rpx;
+		  top:0rpx;
+		right: -2rpx;
+	z-index: 9;
+	    clip:rect(auto,40rpx,auto,auto);
+	    background-color:red;
+	  } */
+ 
+

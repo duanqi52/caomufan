@@ -1,0 +1,137 @@
+/**index.wxss**/
+
+.Body{
+	display: flex;
+	flex-direction: column;
+	height: 100vh;
+}
+
+/* 搜索样式 */
+.SearchBox{
+height: 80rpx;
+padding: 20rpx 24rpx 20rpx ;
+
+}
+
+.SearchBox .SearchBtnBox {
+  width: 100%;
+  
+  line-height: 80rpx;
+  font-size: 34rpx;
+  
+  color: #888888;
+}
+.SearchBox .SearchBtnBox .SearchBtn{
+  background: #ffffff;
+  padding: 0 48rpx;
+  border-radius: 20rpx;
+}
+
+/* 保护地与湿地公园Nav */
+.navBtnBox{
+	padding: 0 0 20rpx 0;
+	height: 80rpx;
+}
+.navBtnShow{
+	margin: 0 20rpx;
+	width: 708rpx;
+	display: flex;
+	border: 1rpx solid #ddd;
+	background: #ddd;
+	height: 80rpx;
+	line-height: 80rpx;
+	background: #fff;
+	border-radius: 20rpx;
+	font-size: 28rpx;
+	overflow: hidden;
+}
+
+.navBtnShow .navBtn{
+	width: 704rpx;
+	text-align: center;
+}
+.navBtnShow .navBtn.active{
+	color: #fff;
+	background: #74b113;
+	
+}
+
+/* 列表 */
+.listShowBox{
+	flex:1;
+	display: flex;
+	/* overflow: hidden; */
+	
+}
+.listShowBoxNow{
+	display:flex;
+	height: 100%;
+}
+/* 列表左边 */
+.listLeft{
+		display:flex;
+	flex-direction: column;
+	height: 100%;
+	width: 170rpx;
+	
+}
+
+.showMap{
+	background: #74b113;
+	width: 130rpx;
+	font-size: 27rpx;
+	color: #fff;
+	height: 60rpx;
+	line-height: 60rpx;
+	text-align: center;
+	border-radius: 10rpx;
+	margin:5rpx 20rpx 26rpx;
+}
+.listLeftShow{
+	width: 170rpx;
+	flex: 1;
+	overflow: hidden;
+}
+.listLeftShow .LeftBtn{
+	height: 70rpx;
+	line-height: 70rpx;
+	font-size: 27rpx;
+	padding-left: 20rpx;
+	width: 150rpx;
+	text-align: center;
+}
+.listLeftShow .LeftBtn.active{
+	background: #e9e9e9;
+	color: #74b113;
+}
+
+/* 列表右边 */
+.listRight{
+	width: 580rpx;
+	background: #e9e9e9;
+	
+}
+.rightShowBox{
+	width: 535rpx;
+	padding: 0 30rpx;
+}
+.rightShowBox .rightItem{
+	width: 465rpx;
+	
+	background: #fff;
+	margin: 20rpx 0;
+	font-size: 28rpx;
+	line-height: 45rpx;
+	padding: 20rpx 35rpx;
+	border-radius: 20rpx;
+}
+	
+	
+	
+	
+	
+	
+::-webkit-scrollbar{
+ 
+display: none;
+}

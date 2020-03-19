@@ -1,0 +1,281 @@
+.showContent{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  .companyTitle{
+      height: 50px;
+      line-height: 50px;
+      padding: 0 0 0 30px;
+      font-size: 16px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      .companyName{
+
+      }
+      .companyBtnBox{
+        padding-right: 30px;
+        display: flex;
+        .companyBtn{
+          cursor: pointer;
+          margin-left: 10px;
+          a{
+            background: #3b9414;
+            padding: 8px 10px;
+            color: #fff;
+            border-radius: 5px;
+            i{
+              margin-right: 5px;
+              font-size: 24px;
+              vertical-align: middle;
+              line-height: 1px;
+            }
+          }
+        }
+      }
+
+
+  }
+  .showListBox{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  .showListBoxBox{
+    position: relative;
+    height: 655px;
+    //<!--        框-->
+    .listBg1{
+      height: 542px;
+      width: 1074px;
+      background: #fff1f1;
+      border:3px dashed #cee9c2;
+      .listBg2{
+        height: 385px;
+        width: 1034px;
+        border:3px dashed #cee9c2;
+        background: #fffcf8;
+        margin: 18px;
+        .listBg3{
+          height: 227px;
+          width: 994px;
+          border:3px dashed #cee9c2;
+          background: #fff;
+          margin: 18px;
+        }
+      }
+    }
+
+    .listShowContent{
+      position: absolute;
+      top: 0;
+      top:45px;
+      left: 45px;
+      .listShowItem{
+        .listMoneyItem{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 800px;
+          font-size: 16px;
+          .listMoneyItemBox{
+            display: block;
+          }
+        }
+        .listRelation{
+          display: flex;
+
+          .listRelationItem{
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .listRelationName{
+            width: 140px;
+            padding: 0 15px;
+            height: 80px;
+            background: #f6f6f6;
+            border:1px solid #d4d4d4;
+            font-size: 16px;
+          }
+          .listRelationLine{
+
+          }
+        }
+      }
+      .lsi1{
+        height: 225px;
+        .listMoneyItem{
+          height: 100px;
+        }
+        .listRelation{
+          height: 80px;
+          padding: 0 50px ;
+          .listRelationLine{
+            width: 110px;
+            img{
+              width: 100%;
+            }
+          }
+        }
+      }
+      .lsi2{
+        display: flex;
+        height: 137px;
+        .listMoneyItem{
+          width: 800px;
+        }
+        .listRelation{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .listRelationName{
+            z-index: 9;
+          }
+          .listRelationLine{
+            position: absolute;
+            top: -46px;
+            z-index: 1;
+            img{
+              height: 76px;
+              width: 10.47px;
+            }
+          }
+        }
+      }
+      .lsi3{
+        display: flex;
+        height: 137px;
+        .listMoneyItem{
+          width: 800px;
+        }
+        .listRelation{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          .listRelationName{
+            z-index: 9;
+          }
+          .listRelationLine{
+            position: absolute;
+            top: -35px;
+            z-index: 1;
+            img{
+              height: 76px;
+              width: 10.47px;
+            }
+          }
+        }
+      }
+      input{
+        height: 48px;
+        border: 1px solid #ddd;
+        text-align: center;
+        width: 120px;
+        font-size: 16px;
+      }
+      input[type="number"]::-webkit-textfield-decoration-container {
+        /*background-color: #fff;    */
+      }
+      input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+      }
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;    /*outer */
+      }
+    }
+
+    ////输入框及展示
+    //.listMoneyBox{
+    //  position: absolute;
+    //  top:30px;
+    //  left: 30px;
+    //  display: flex;
+    //  line-height: 130px;
+    //  .listMoneyItem{
+    //    font-size: 16px;
+    //    text-align: center;
+    //    input{
+    //      height: 48px;
+    //      border: 1px solid #ddd;
+    //      text-align: center;
+    //      width: 120px;
+    //      font-size: 16px;
+    //    }
+    //    input[type="number"]::-webkit-textfield-decoration-container {
+    //      /*background-color: #fff;    */
+    //    }
+    //    input[type="number"]::-webkit-inner-spin-button {
+    //      -webkit-appearance: none;
+    //    }
+    //    input[type="number"]::-webkit-outer-spin-button {
+    //      -webkit-appearance: none;    /*outer */
+    //    }
+    //  }
+    //  .listMoney1{
+    //    width: 1010px;
+    //  }
+    //  .listMoney2{
+    //    width: 260px;
+    //  }
+    //  .listMoney3{
+    //    width: 270px;
+    //  }
+    //}
+    //
+    ////<!--        关系列表-->
+    //.listRelationBox{
+    //  position: absolute;
+    //  top:160px;
+    //  left: 60px;
+    //  display: flex;
+    //  .listRelationItem{
+    //    line-height:80px;
+    //    width: 140px;
+    //    height: 80px;
+    //    text-align: center;
+    //    font-size: 16px;
+    //  }
+    //  .listRelationName{
+    //    border:2px solid #ddd;
+    //    background: #f6f6f6;
+    //  }
+    //  .listRelationLine{
+    //    width: 120px;
+    //    font-size: 28px;
+    //    color:#949494 ;
+    //  }
+    //}
+    ////额外的出纳人关系
+    //.listOtherRelationBox{
+    //  position: absolute;
+    //  top:240px;
+    //  right: 40px;
+    //  .listRelationItem{
+    //    text-align: center;
+    //  }
+    //    .listRelationLine{
+    //      width: 3px;
+    //      margin: 0 auto;
+    //      height: 120px;
+    //      border-left: 3px solid #949494;
+    //      //color:#949494 ;
+    //    }
+    //  .listRelationName{
+    //    line-height:80px;
+    //    width: 140px;
+    //    height: 80px;
+    //    text-align: center;
+    //    font-size: 16px;
+    //    border:2px solid #ddd;
+    //    background: #f6f6f6;
+    //  }
+    //}
+  }
+
+  }
+}

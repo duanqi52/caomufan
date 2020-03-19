@@ -1,0 +1,78 @@
+<!--pages/Illustrated/illustratedList/illustratedList.wxml-->
+  <!-- 输入框 -->
+  <view class="SearchBox" wx:if='{{!moreStatus}}'>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="SearchInputBox">
+        <view class="searchInput">
+          <input name='name' 
+          placeholder-style='padding-left:10rpx' 
+          placeholder="请输入你要搜索的动物名" 
+          bindfocus='getInputFocus'  
+          bindblur='noInputtFocus'
+          value="{{searchVal}}" 
+          bindconfirm=''
+          bindinput='changeSearch'  />
+        </view>
+
+        <view class="searchBtn" bindtap="searchGo">          
+            <view class="searchBtnShow">搜索</view>          
+        </view>  
+      </view>
+    </form>
+      
+  </view>
+
+  <view class="HistooryListBox ListIteam" hidden="{{!focusStatus}}">
+    <view class="HistoryTitle TitleIteam">
+      <text>历史搜索</text>
+      <view class="HistoryTitleBtn" bindtap="removeHistory">
+        <icon formType="reset" class="iconfont icon-qingkong1" ></icon>清空
+      </view>
+    </view>
+    <view class="HistoryList">
+      <view class="HistoryBox">      
+          <view wx:for='{{historyList}}' class="HistoryIteamBox" wx:key='{{index}}'>
+            <view class="HistoryIteam" >
+              <navigator url="/pages/Search/searchList/searchlist?searchVal={{item}}" hover-class="none">
+                <text style="word-break: keep-all;word-wrap: break-word;">{{item}}</text>
+              </navigator>
+            </view>
+          </view>
+      </view>
+    </view>
+  </view>
+
+   <!-- 展示列表 -->
+  <view class="listBox" hidden="{{focusStatus}}">
+    <scroll-view  scroll-y="true" style="height:{{listHeight}}px;"  scroll-with-animation='true'    >  
+      <view class="ListBg">       
+          <view class="ListShowBox clearfix" >       
+              <view wx:for='{{showList}}' wx:key='{{index}}' class="ListShowItem ">
+                <navigator url="/pages/Illustrated/illustratedData/illustratedData?type={{typeData}}&itemID={{item.birdID}}" hover-class="none" style="   display: inline-flex;"> 
+                  <view class="ListShowImage">
+                    <image wx:if='{{item.image==""}}' src="../../images/searchlist/nullImg.png"></image>
+                    <image wx:else src="{{item.img}}"></image>
+                  </view>
+                  <view class="ListShowData">
+                    <view class="ListShowName">
+                      <text>{{item.Name}}</text>
+                    </view>
+                    <view  class="ListShowEnName"> 
+                      <text>{{item.scientificName}}</text>
+                    </view>
+                    <view class="ListShowLaName">
+                      <text>{{item.anotherName}}</text>
+                    </view>
+                  </view>
+                </navigator>   
+              </view>                
+          </view>
+
+          <!-- 当列表为空时显示结果 -->
+            <view class="noListShow" wx:if='{{showList.length==0}}' style="">
+              <text>没有搜索到相关结果</text>
+            </view>   
+        </view>
+      </scroll-view>
+  </view>
+  

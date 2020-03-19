@@ -1,0 +1,81 @@
+<!--index.wxml-->
+<!-- <component></component> -->
+<LoadingBird modalHidden='{{!loadingStatus}}'  modalText='登录中'></LoadingBird>
+<view class="ShowBody">
+
+<!-- 搜索框开始 -->
+  <view class="SearchBox">
+    <view class="SearchLogo">
+      <image src="../../images/index/SearchLogo.png"/>
+      <button class="shareBtn" open-type="share" hover-class="none">
+        <image  src="../../images/index/share.png"/>
+      </button>
+    </view>
+    <navigator url="/pages/Search/search/search" hover-class="none" >
+     <!-- <navigator url="/pages/Search/searchList/searchlist" hover-class="none" > -->
+    
+      <view class="SearchBtnBox">
+        <view class="SearchBtn">
+          <icon class="iconfont icon-sousuo"></icon>
+          <text>输入鸟名简拼/中文/英文</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <!-- 搜索框结束 -->
+
+  <!-- 鸟声识别页面按钮 -->
+  <view class="ShowBtnBox " >
+    <navigator url="/pages/AudioDistinguish/Audio/audio" hover-class="none">
+      <view class="ShowBtnImg ">
+        <image src="../../images/index/ShowBtn1.png"></image>
+      </view>
+      <view class="ShowBtnText ">
+          <view  class="ShowTitle">
+            <text>鸟声识别</text>
+          </view>
+          <view  class="ShowList">
+            <text>悦耳鸟声的鉴定机</text>
+          </view>
+      </view>
+    </navigator>
+  </view>
+
+  <!-- 拍照识别页面按钮 -->
+  <view class="ShowBtnBox " style="background-image:url('../../images/index/ShowBtn2.png')">
+    <navigator url="/pages/PhotoDistinguish/Photo/photo" hover-class="none">
+      <view class="ShowBtnImg ">
+        <image src="../../images/index/ShowBtn2.png"></image>
+      </view>
+      <view class="ShowBtnText ">
+          <view  class="ShowTitle">
+            <text>拍照识别</text>
+          </view>
+          <view  class="ShowList">
+            <text>智能识别各种鸟类</text>
+          </view>
+      </view>
+    </navigator>
+  </view>
+
+  <!-- 鸟类图鉴页面按钮 -->
+  <view class="ShowBtnBox" >
+    <navigator url="/pages/Illustrated/Illustrated/illustrated" hover-class="none">
+      <view class="ShowBtnImg ">
+        <image src="../../images/index/ShowBtn3.png"></image>
+      </view>
+      <view class="ShowBtnText ">
+          <view  class="ShowTitle">
+            <text>鸟类图鉴</text>
+          </view>
+          <view  class="ShowList">
+            <text>一本鸟类资料的大图鉴</text>
+          </view>
+      </view>
+    </navigator>
+  </view>
+
+  
+</view>
+
+<!-- <button bindgetuserinfo="getUserInfoNow" open-type="getUserInfo">获取用户信息</button> -->

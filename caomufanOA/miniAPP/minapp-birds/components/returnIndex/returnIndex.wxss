@@ -1,0 +1,27 @@
+/* components/returnIndex/returnIndex.wxss */
+.bodyReturn{
+position: fixed;
+  top: 30rpx;
+  left: 0; 
+  z-index: 999; 
+}
+.returnBtn{
+  
+  position: relative;
+}
+.returnBtnBg{
+ background: #9ac754;
+  opacity: 0.7;
+  width: 170rpx;
+  height: 50rpx;
+  border-top-right-radius: 25rpx;
+  border-bottom-right-radius: 25rpx; 
+}
+.returnBtn{
+  color: #fff;
+  position: absolute;
+  line-height: 50rpx;
+  top:0;
+  left: 20rpx;
+  font-size: 27rpx;
+}

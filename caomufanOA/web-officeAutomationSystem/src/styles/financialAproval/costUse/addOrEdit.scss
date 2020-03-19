@@ -1,0 +1,80 @@
+
+.contentBody{
+  height: 100%;
+}
+//部门人员列表上部分按钮
+.companyTitle{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 0 0 30px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  .companyName{
+
+  }
+  .companyBtnBox{
+    padding-right: 30px;
+    display: flex;
+    .companyBtn{
+      cursor: pointer;
+      margin-left: 10px;
+      a{
+        background: #fff;
+        padding: 8px 10px;
+        color: #000;
+        //border-radius: 5px;
+        i{
+          margin-right: 5px;
+          font-size: 24px;
+          vertical-align: middle;
+          line-height: 1px;
+        }
+      }
+      .btn_left{
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        color: #4ca824;
+      }
+      .btn_right{
+        border-right: 1px solid #ddd;
+      }
+    }
+  }
+
+}
+
+//表单数据
+.formBody{
+  padding: 0 30px;
+  .formShow{
+    display: flex;
+    flex-wrap: wrap;
+    .formItem{
+      display: flex;
+      font-size: 16px;
+      margin: 20px 0 0 0;
+      width: 610px;
+      .formItemName{
+        width: 120px;
+        height:46px ;
+        line-height: 46px;
+      }
+      .formItemInput{
+        width: 470px;
+        border: 1px solid #ddd;
+        line-height: 40px;
+        border-radius: 5px;
+        padding: 0 10px;
+      }
+    }
+    .formItem.other{
+      margin: 0 ;
+      .formItemInput{
+        width: 1080px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,75 @@
+<!--pages/audio/audio.wxml-->
+<LoadingBird modalHidden='{{!status.loadingStatus}}' modalText='上传识别中，请稍后...'></LoadingBird>
+<view class="Body" style="height:{{sysHeight.pageHeight}}px">
+  <view class="StartBtnBox"  style="height:{{sysHeight.btnHeight}}px">
+    <view class="BtnBox">
+      <!-- <view class="ripple "></view> -->
+      
+      <view hidden='{{status.soundRecordingStatus}}' class="startBtn" bindtap="recodeClick">
+        <view class="StartImg">
+          <image src="../../../images/AudioDistinguish/Audio/logo.png"></image>
+        </view>
+        <view class="StartTxt">
+          <text>点击开始录音</text>
+        </view>
+      </view>
+
+
+      <view hidden='{{!status.soundRecordingStatus}}' class="startBtn" bindtap="{{!status.uploadStatus?'recodeEnd':'playAudio'}}">
+        <view class="voiceTime">{{playColl.audioTimeShow}}秒</view>
+        <view class="voiceing">
+          <block wx:for='{{randomList}}' wx:key='{{index}}'>
+          <!-- {{item}} -->
+            <view
+              class="colItem "
+              style='height:{{item.height}}rpx;margin-top:-{{item.height/2}}rpx;transition: all {{item.time}}s;left: {{index*4}}px;'>
+            </view>    
+            
+          </block>
+        </view>
+        
+        <view class="StartTxt" hidden="{{status.uploadStatus}}" ><text>点击停止</text></view>
+         <view wx:if='{{!playColl.playStatus}}' hidden="{{!status.uploadStatus}}" class="StartTxt"  >播放录音</view>
+         <view wx:if='{{playColl.playStatus}}' hidden="{{!status.uploadStatus}}" class="StartTxt"  >暂停录音</view>
+      </view>
+
+      
+
+
+      <view class="ripple ripple11 " animation="{{animation.animationData1}}" ></view>
+      <view class="ripple ripple22 " animation="{{animation.animationData2}}"></view>
+      <view class="ripple ripple1 {{status.animationStatus?'rippleAnimation1':''}}" ></view>
+      <view class="ripple ripple2 {{status.animationStatus?'rippleAnimation2':''}}"></view>
+      <view class="ripple ripple3 {{status.animationStatus?'rippleAnimation3':''}}"></view>
+      <view class="ripple ripple4 {{status.animationStatus?'rippleAnimation4':''}}"></view>
+
+
+    </view>
+
+    <view hidden='{{!status.uploadStatus}}' class="UploadAudio">
+      <!-- <navigator url="/pages/AudioDistinguish/AudioResult/audioresult?url={{playColl.playUrl}}" hover-class="none" >  -->
+        <!-- <button bindtap="updataGo">上传识别</button> -->
+        <button bindgetuserinfo="getUserInfoNow" open-type="getUserInfo" >上传识别</button >
+      <!-- </navigator> -->
+    </view>
+    
+   
+    
+    
+  </view>
+   <view hidden bindtap="recordingAndPlaying" style="position:absolute;top:0;z-index:99999">
+     <button type="primary">播放</button>
+    </view>
+    <!-- <view class="AgainAudioBox"  > -->
+     <view class="AgainAudioBox" hidden='{{!status.uploadStatus}}' >
+      <view class="AgainAudio" style="display:flex">
+        <view  bindtap='againaudio'>重新录制</view>
+       
+      </view>
+    </view>
+ 
+  <view class="Bottom">
+    <image src="../../../images/AudioDistinguish/Audio/bottom.png"></image>
+  </view>
+</view>
+  

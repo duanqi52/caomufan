@@ -1,0 +1,57 @@
+<!--pages/PhotoDistinguish/PhotoResult/photoresult.wxml-->
+<view class="Body" style="height:{{pageHeight}}px">
+  <view class="TopData">
+    <view class="TopImage">
+      <image src="{{imgUrl}}" bindtap="bigImg" data-url='{{imgUrl}}'></image>
+    </view>
+    <!-- <view class="TopImageBg" >
+      <image src="{{imgUrl}}"></image>
+    </view> -->
+  </view>
+
+  <view class="DataList">
+    <view class="ListShowBox">
+      <scroll-view class="scroll-view_H" scroll-x="true" enable-flex='true' >
+        <block wx:for='{{dataList}}'  wx:key='{{index}}'>        
+          <view class="DataItem" bindtap="goDataPage" data-birdID="{{item.birdID}}" data-birdName='{{item.birdName}}'>
+            <!-- <navigator url="/pages/Illustrated/BirdData/BirdData?birdID={{item.birdID}}" hover-class="none" >  -->
+              <view class="DataPhottBox">
+                <view class="dataPhoto">
+                <image wx:if='{{item.img==""||item.img==null}}' src="../../../images/other/bird_Square.png"></image>
+                <image wx:else src="{{item.img}}"></image>
+                  <!-- <image src="{{item.img}}"></image> -->
+                </view>              
+                <view class="dataMore">
+                  <text>查看详情</text>
+                </view>              
+              </view>
+            <!-- </navigator> -->
+            <view class="DataShow">
+              <view class="DataNameShow">
+                <view class="DataNameC">
+                  <text>{{item.birdName}}</text>
+                </view>
+                <view class="DataNameEn">
+                  <text wx:if='{{item.scientificName!=null}}'>{{item.scientificName}}</text>
+                </view>
+              </view>
+              <view class="DataNumber">
+                <view class="NumberTitle">
+                  <text>相似度</text>
+                </view>
+                <view class="NumberShow">
+                  <text>{{item.similarity+'%'}}</text>
+                </view>
+              </view>
+            </view>
+          </view>       
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="BottomBtn">
+    <button open-type="share">炫耀一下</button>
+  </view>
+</view>
+

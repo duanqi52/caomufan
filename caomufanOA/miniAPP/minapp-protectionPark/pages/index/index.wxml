@@ -1,0 +1,71 @@
+<!--index.wxml-->
+
+<view class="Body">
+  <!-- 搜索框 -->
+  <view class="SearchBox">
+    <navigator url="/pages/search/search" hover-class="none" >
+      <view class="SearchBtnBox">
+        <view class="SearchBtn">
+          <text>请输入您要搜索的地名</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+  <!-- 保护地与湿地公园Nav -->
+  <view class="navBtnBox">
+    <view class="navBtnShow">
+      <view class="navBtn {{active.navIndex==='0'?'active':''}}" data-index="0" bindtap="checkNavBtn">
+        <view>保护地</view>
+      </view>
+      <view class="navBtn  {{active.navIndex==='1'?'active':''}}" data-index="1" bindtap="checkNavBtn">
+        <view>湿地公园</view>
+      </view>
+    </view>    
+  </view>
+
+  <!-- 列表展示 -->
+  <view class="listShowBox">
+    <view class="listShowBoxNow">
+    
+      <view class="listLeft">
+        <view class="showMap">
+          <text>地图查看</text>
+        </view>
+        <view class="listLeftShow">
+          <scroll-view scroll-y="true" style="height:100%"  scroll-with-animation='true'  >
+
+            <block wx:for='{{leftData}}'  wx:key='index' >
+              <view bindtap="checkLeftBtn" data-name='{{item.name}}' data-index='{{index}}'
+                  class="LeftBtn {{active.leftIndex === index?'active':''}}">
+                    {{item.name}}
+              </view>
+            </block>
+            
+          </scroll-view>
+        </view>
+      </view>
+
+      <view class="listRight">
+        <scroll-view scroll-y="true" style='height:100%'   scroll-with-animation='true'  >
+          <view class="rightShowBox">
+            <block wx:for='{{rightData}}' wx:key='{{index}}'>
+              <view class="rightItem" bindtap="mapGo" data-name="{{item}}">
+                <text>{{item}}</text>
+              </view>
+            </block>   
+             
+                   
+          </view>
+        </scroll-view>
+          <!-- 当列表为空时显示结果 -->
+        <view class="noListShow" wx:if='{{RightDataShow.length==0}}' style="">
+          <text>没有搜索到相关结果</text>
+        </view>  
+      </view>
+
+    </view>
+    
+
+  </view>
+</view>

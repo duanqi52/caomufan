@@ -1,0 +1,55 @@
+<!--pages/search/search.wxml-->
+<view class="Body">
+
+  <!-- 输入框 -->
+  <view class="SearchBox">
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="SearchInputBox">
+        <view class="searchInput">
+          <input name='name' auto-focus placeholder-style='padding-left:10rpx' placeholder="请输入你要搜索的地名"  value="{{searchVal}}" bindfocus='changeSearch'  bindinput='changeSearch'  />
+        </view>
+      </view>
+    </form>
+    <view hidden='{{!searchLoadingStatus}}' class="associateBox">
+      <scroll-view scroll-y="true" class="associateScroll" style="height:100%"  >
+        <block wx:for='{{bindSource}}' wx:key='{{index}}'>
+          <view  bindtap="mapGo" data-name='{{item}}' class="associateItem">{{item}}</view>
+        </block>        
+      </scroll-view>
+    </view>      
+  </view>
+
+
+  <!-- 历史搜索 -->
+  <view hidden='{{searchLoadingStatus}}' class="HistooryListBox ">
+
+      <view class="HistoryTitle ">
+        <text>历史搜索</text>
+        <view class="HistoryTitleBtn" bindtap="removeHistory">
+          <icon formType="reset" class="iconfont icon-qingkong1" ></icon>清空
+        </view>
+      </view>
+      
+      <view class="HistoryList">
+        <view class="HistoryBox"> 
+          <scroll-view scroll-y="true" style="height:100%"  scroll-with-animation='true'  >
+            <block wx:for='{{historyList}}' wx:key='{{index}}'>
+              <view  class="HistoryIteamBox" bindtap="mapGo"  data-name='{{item}}'>
+                <view class="HistoryIteam" >
+                  <!-- <navigator url="/pages/Search/searchList/searchlist?searchVal={{item}}" hover-class="none"> -->
+                    <text style="word-break: keep-all;word-wrap: break-word;">{{item}}</text>
+                  <!-- </navigator> -->
+                </view>
+              </view>
+            </block>
+              
+          </scroll-view>      
+            
+        </view>
+      </view>
+
+    
+
+  </view>
+
+</view>

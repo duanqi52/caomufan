@@ -1,0 +1,7 @@
+/**app.wxss**/
+page{
+  font-family: Microsoft YaHei;
+
+  background: #f1f1f1;
+
+}

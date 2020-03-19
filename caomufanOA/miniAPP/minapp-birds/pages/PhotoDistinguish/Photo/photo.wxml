@@ -1,0 +1,73 @@
+<!--pages/photo/photo.wxml-->
+    <LoadigBird modalHidden='{{!loadingStatus}}' modalText='上传识别中，请稍后...' style=" height:{{pageHeight}}px;"></LoadigBird>
+  <view class="cameraBox">
+    <camera device - position="back" flash = "off" style=" height:{{pageHeight}}px; margin-left:0px">
+    
+
+      <cover-view class="BgBox">
+        <cover-view class="BgTop"  >
+          <!-- 上边部分的阴影 -->
+          <cover-view class="BgTopItem"  style="">
+          </cover-view> 
+          <cover-view class="BgMil" >
+            <!-- 中间部分的左边阴影 -->
+            <cover-view class="MilLeft" style="height:{{photoHeight}}rpx">            
+            </cover-view>
+            <!-- 中间部分的透明摄影框 -->
+            <cover-view class="MilMil" style="height:{{photoHeight}}rpx;vertical-align: middle;">
+              <cover-view class="topLineT topLine1"></cover-view>
+              <cover-view class="topLine topLine1"></cover-view>
+              <cover-view class="topLineT topLine2"></cover-view>
+              <cover-view class="topLine topLine2"></cover-view>
+              <cover-view class="topLineT topLine3"></cover-view>
+              <cover-view class="topLine topLine3" ></cover-view>
+              <cover-view class="topLineT topLine4"></cover-view>
+              <cover-view class="topLine topLine4"></cover-view>              
+            </cover-view>
+            <!-- 中间部分的右边阴影 -->
+            <cover-view class="MilRight" style="height:{{photoHeight}}rpx">            
+            </cover-view>
+          </cover-view>       
+        </cover-view> 
+         <!-- 下边部分的阴影 -->      
+        <cover-view class="BgBottom">
+        </cover-view>      
+      </cover-view>
+
+      <!-- 上传后展示图片 -->
+       <!-- <cover-imageclass="ShowImage" hidden="{{!isShowImage}}"  style="width:100%;height:100%" src="{{oldImageUrl}}"></cover-image> -->
+      <cover-view class="ShowImage" >
+        <cover-image   wx:if='{{oldImageUrl}}'   style="width:100%;height:100%" src="{{oldImageUrl}}"></cover-image>
+      </cover-view>
+
+       <!-- 拍摄按钮 -->
+      <cover-view hidden="{{isShowImage}}" class='carmenGo' bindtap='takePhotoAction'>       
+          <cover-image src="../../../images/PhotoDistinguish/Photo/carmen.png"></cover-image>        
+      </cover-view>
+
+      <!-- 选择文件按钮 -->
+      <cover-view hidden="{{isShowImage}}" class='FileGo' bindtap='firePhoto'>       
+          <cover-view>选择照片文件</cover-view>
+          <cover-view class="FileGoBot"></cover-view>        
+      </cover-view>
+
+      <!-- 拍照完成显示部分 -->
+      <cover-view hidden="{{!isShowImage}}" class='uploadBtn' >
+        <!-- <navigator url="/pages/PhotoDistinguish/PhotoResult/photoresult?imageurl={{imageUrl}}" hover-class="none" >  -->
+          <button bindgetuserinfo="getUserInfoNow" open-type="getUserInfo" >上传识别</button >
+
+        <!-- </navigator> -->
+        <cover-view class="AgainCrearm" bindtap="againCrearmGo">
+          <cover-view>重新拍照</cover-view>
+        </cover-view>
+      </cover-view>
+
+    </camera>
+
+    
+    <!-- <cover-image  hidden="{{!isShowImage}}"  style="width:100%;height:100%" src="{{imageUrl}}"></cover-image> -->
+    
+  </view>
+
+  <canvas hidden="{{cameraShow}}" canvas-id="image-canvas" style='width:100%; height:{{pageHeight}}px;'></canvas>
+

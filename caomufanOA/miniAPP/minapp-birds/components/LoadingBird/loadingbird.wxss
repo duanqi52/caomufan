@@ -1,0 +1,29 @@
+/* components/LoadingBird/loadingbird.wxss */
+.loadingBody{
+  background: rgb(0,0,0,0.7);
+  min-height:500rpx;
+  display: flex;
+  justify-content: center; /* 水平居中 */
+  align-items: center;     /* 垂直居中 */
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 99999999;
+
+}
+.loadingBody .loadingBox{
+  text-align: center;
+  display: inline-block
+}
+.loadingBody .loadingBox .loadingGif{
+  /* width: 70rpx;
+  height: 70rpx; */
+}
+.loadingBody .loadingBox .loadingGif image{
+  width:80rpx;
+  height: 80rpx;
+}
+.loadingBody .loadingBox .loadingText{
+font-size: 28rpx;
+color: #Fff
+}

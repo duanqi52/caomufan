@@ -1,0 +1,80 @@
+
+$initBG:#4a9a38;//基础背景颜色
+$initFontColor:#fff;//基础字体颜色
+$fs:20px;//一般字体大小
+
+.BodyShow{
+  background-color: $initBG;
+  background-image: url("../../assets/images/index/bg.png");
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  color: $initFontColor;
+  width: 100%;
+  height: 100vh;
+
+  //头部展示
+  .topShow{
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    background: #4ca824;
+    font-size: $fs;
+    box-shadow: 0px 0px 10px #4a4646;
+    //.topLefe{
+    //  padding: 0 0 0 20px ;
+    //  font-weight: bold;
+    //}
+    //.topRight{
+    //  padding: 0 20px 0 0;
+    //  display: flex;
+    //  .topPhone{
+    //    padding: 0 10px 0 0;
+    //    .TopAvatarImg{
+    //      vertical-align: middle;
+    //    }
+    //  }
+    //  .topOut{
+    //    span{
+    //      color: $initFontColor;
+    //    }
+    //  }
+    //}
+  }
+
+  //列表展示
+  .goListShow{
+    display: flex;
+    ul{
+      display: flex;
+      padding: 0px 0 0 63px;
+      flex-wrap: wrap;
+      li{
+        margin-right: 60px;
+        margin-top: 63px;
+
+        .goBtn{
+          position: relative;
+          width: 248px;
+          height: 84px;
+          //box-shadow: 2px 2px 10px #5f5f5f;
+          border-radius: 20px;
+          color: #fff;
+          .goBtnShow{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            line-height: 84px;
+            text-align: center;
+            font-size:$fs ;
+            i{
+              margin-right: 10px;
+              font-size: 36px;
+              vertical-align: middle;
+            }
+          }
+        }
+      }
+    }
+  }
+}

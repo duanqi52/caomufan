@@ -1,0 +1,142 @@
+/* pages/search/search.wxss */
+@import '../../lib/icon/icon-qingkong.wxss';
+
+.Body{
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 搜索输入框 */
+.SearchBox{
+	
+	display: flex;
+	flex-direction: column;
+	
+}
+.SearchBox form{
+	padding: 20rpx 24rpx;
+	background:#f1f1f1 ;
+}
+.SearchBox .SearchInputBox{
+	background: #fff;
+	display: flex;
+	width: 700rpx;
+	border: 1rpx solid #74b113 ;
+	height: 80rpx;
+	border-radius: 15rpx;
+	line-height: 80rpx;
+	border-radius: 20rpx;
+	overflow: hidden;
+}
+.SearchBox .SearchInputBox .searchInput{
+	padding: 0 30rpx;
+}
+.SearchBox .SearchInputBox .searchInput input{
+	width: 640rpx;
+	height: 80rpx;
+}
+.SearchBox .SearchInputBox .searchBtn{
+	width: 120rpx;
+}
+.SearchBox .SearchInputBox .searchBtn .searchBtnShow{
+	width: 100%;
+	text-align: center;
+	background: #74b113;
+	color: #fff;
+	font-size: 28rpx;
+}
+
+/* 搜索联想框 */
+.associateBox{
+	/* box-shadow: 0 0 10rpx #ddd;
+	margin-top: 10rpx; */
+	flex: 1;
+	
+	overflow: auto;
+}
+.associateItem{
+	background: #fff;
+	text-align: center;	
+	line-height: 80rpx;
+	display: block;
+
+	padding: 0rpx 40rpx;
+	border-radius: 20rpx;
+	width: 630rpx;
+	margin: 20rpx auto;
+}
+
+
+/* 历史搜索 */
+.HistooryListBox{
+	
+	width: 710rpx;
+	flex: 1;
+
+	display:flex;
+	flex-direction: column;
+
+	padding: 0 20rpx;
+}
+
+.HistoryTitle{
+	display: flex;
+	height: 60rpx;
+	line-height: 60rpx;
+	 justify-content:space-between;
+	 font-size: 28rpx;
+	 border-bottom:1rpx solid #ddd ;
+	 color: #888888;
+}
+.HistoryTitle .HistoryTitleBtn{
+	color: #74b113;
+}
+.HistoryTitle .HistoryTitleBtn icon{
+	
+	font-size: 26rpx;
+}
+
+/* 历史列表 */
+.HistoryList{
+	flex: 1;
+
+	overflow: auto;
+	
+}
+.HistoryList .HistoryBox{
+	width: 100%;
+
+ 
+}
+.HistoryList .HistoryIteamBox{
+ 
+}
+
+.HistoryList  .HistoryIteamBox .HistoryIteam{
+	background: #fff;
+	text-align: center;
+
+	line-height: 80rpx;
+   display: block;
+   margin: 20rpx 0;
+   padding: 5rpx 40rpx;
+   border-radius: 20rpx;
+   
+}
+.HistoryList  .HistoryIteamBox .HistoryIteam text{
+	
+
+
+  color: #313233;
+  font-size: 34rpx;
+
+  
+}
+
+
+
+::-webkit-scrollbar{
+ 
+display: none;
+}

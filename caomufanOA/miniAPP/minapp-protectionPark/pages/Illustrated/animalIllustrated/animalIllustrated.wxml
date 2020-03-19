@@ -1,0 +1,91 @@
+<!--pages/Illustrated/animalIllustrated/animalIllustrated.wxml-->
+
+
+<view class="Body">
+
+<!-- 搜索框 -->
+  <view class="SearchBox">
+    <navigator url="/pages/Illustrated/illustratedList/illustratedList?type=animall&more=no" hover-class="none" >
+      <view class="SearchBtnBox">
+        <view class="SearchBtn">
+          <icon class="iconfont icon-sousuo"></icon>
+          <text>请输入您要搜索动物</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+<!-- 纲列表 -->
+  <view class="classBox">
+    <view class="classList">
+      <scroll-view class="classScroll" scroll-x="true" style=""  scroll-with-animation='true'>
+        <block  wx:for='{{classData}}' wx:key='index'  >
+          <view            
+            bindtap="classChange"             
+            data-name='{{item}}'
+            data-index='{{index}}'
+            class="classItem {{classIndex === index?'active':''}}">
+              <text bindtap="classChange"             
+            data-name='{{item}}'
+            data-index='{{index}}'>{{item}}</text>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 目列表 -->
+  <view class="ListBox">
+    <view class="ListLeft">
+      <scroll-view scroll-y="true" style="height:{{listHeight}}px;"  scroll-with-animation='true'  >
+        <view 
+          wx:for='{{ListDataShow}}' 
+          bindtap="tabChange" 
+          wx:key='index' 
+          data-name='{{item}}'
+          data-index='{{index}}'
+          class="LeftBtn {{activeIndex === index?'active':''}}">
+            {{item}}
+        </view>
+        
+      </scroll-view>
+    </view>
+
+    <!-- 科列表 -->
+    <view class="ListRight">
+     
+      <scroll-view scroll-y="true" style="height:{{listHeight}}px" scroll-with-animation='true' enable-back-to-top='true'>      
+        <view wx:for='{{RightDataShow}}' class="RightItem" wx:key='index'>
+          <view class="RightItemTitle">
+            <text>{{item.familyName}} （{{item.count}}种）</text>
+          </view>
+          <view class="RightItemShow">
+            <view class="RightShowBox" wx:for='{{item.childItem}}'wx:for-item="childItem" wx:for-index="childIndex" wx:key='{{childIndex}}'>
+              <navigator url="/pages/Illustrated/illustratedData/illustratedData?birdID={{childItem.birdID}}" hover-class="none" style="   display: flex;	flex-flow:row wrap;"> 
+                <view class="RightShowImg"> 
+                  <image src="{{childItem.img}}"></image>
+                </view>
+                <view class='RightShowname '>
+                  <text>{{childItem.birdName}}</text>
+                </view>
+              </navigator>
+            </view>
+          </view>
+          <navigator url="/pages/Illustrated/illustratedList/illustratedList?type=animall&more=yes&familyName={{item.familyName}}" hover-class="none" > 
+            <view class="RightItemMore">
+              查看全部
+            </view>
+          </navigator>
+        </view>
+
+         <!-- 当列表为空时显示结果 -->
+        <view class="noListShow" wx:if='{{RightDataShow.length==0}}' style="">
+          <text>没有搜索到相关结果</text>
+        </view>         
+      </scroll-view>
+      
+    </view>
+  </view>
+
+</view>
+

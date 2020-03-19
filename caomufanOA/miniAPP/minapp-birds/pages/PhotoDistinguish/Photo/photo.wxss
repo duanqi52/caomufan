@@ -1,0 +1,197 @@
+/* pages/photo/photo.wxss */
+.showLodingGo{
+	position: absolute;
+	z-index:999999;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	}
+.cemeraShow{
+	position: relative;
+}
+
+/* 展示图片 */
+.ShowImage{
+	position: absolute;
+	top: 0;
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+}
+
+.BgBox{
+	display: flex;
+	height: 100%;
+	width: 100%;
+	flex-direction: column;
+	z-index: 99;
+	position: absolute;
+
+}
+
+.BgTop{
+	width: 100%;
+	height: 100%;
+	flex-direction: column;
+	flex: 1;
+	display: flex;
+	z-index: 999;
+	
+}
+.BgTopItem{
+	background: rgba(0, 0, 0, 0.70);
+	flex:1;
+	z-index: 999;
+	
+}
+.BgMil{
+	
+	display: flex;
+	z-index: 999;
+	
+}
+.BgMil .MilLeft{
+	flex-grow: 1;
+	background: rgba(0, 0, 0, 0.70);
+	height: 100%;
+	height:0;
+	z-index: 999;
+	
+}
+.BgMil .MilMil{
+	flex-grow: 5;
+	/* background: #fff; */
+	height: 100%;
+	position: relative
+
+}
+.BgMil .MilMil .topLine{
+	height: 100rpx;
+	width: 1rpx;
+	background: #fff;
+	position: absolute;
+}
+
+.BgMil .MilMil .topLineT{
+	width: 100rpx;
+	height: 1rpx;
+	background: #fff;
+	position: absolute;
+}
+
+.topLine1{
+	top: 0rpx;
+	left:0rpx;
+	
+}
+.topLine2{
+	top: 0rpx;
+	right:0rpx;
+	
+}
+.topLine3{
+	bottom: 0rpx;
+	left:0rpx;
+	
+}
+.topLine4{
+	bottom: 0rpx;
+	right:0rpx;
+	
+}
+
+
+
+.BgMil .MilRight{
+	flex-grow: 1;
+	background: rgba(0, 0, 0, 0.70);
+
+	height: 100%;
+	height:0;
+	
+	
+}
+
+.BgBottom{
+	
+	width: 100%;
+	height: 525rpx;
+	background:rgba(0, 0, 0, 0.70);
+	z-index: 99;
+	
+}
+
+/* 选择照片 */
+.FileGo{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	bottom: 340rpx;
+	color: #fff;
+	font-size: 34rpx;
+   width: 210rpx;
+  /* border-bottom: 1rpx solid #ddd; */
+  left: 50%;
+  margin-left:-105rpx; 
+  line-height: 34rpx;
+  z-index: 999;
+	/* text-decoration: underline; */
+  
+}
+.FileGo .FileGoBot{
+  /* text-decoration: underline; */
+  background: #fff;
+  height: 1rpx;
+  width: 210rpx
+ 
+}
+
+/* 拍照按钮 */
+.carmenGo{
+	position: absolute;
+	bottom: 62rpx;
+	left: 50%;
+	margin-left: -75rpx;
+	z-index: 999;
+
+	}
+.carmenGo cover-image{
+	width: 150rpx;
+	height: 150rpx;
+	
+	}
+
+
+/* 上传按钮 */
+.uploadBtn{
+	position: absolute;
+	bottom: 150rpx;
+   left: 50%;
+  margin-left: -160rpx;
+  text-align: center;
+  z-index: 9999;
+
+}
+
+.uploadBtn button{
+	background: #ff9919;
+	color: #fff;
+	width: 320rpx;
+	height: 90rpx;
+ margin-bottom: 50rpx;
+  
+}
+
+.uploadBtn .AgainCrearm{
+	font-size: 34rpx;
+	
+	color: #fff;
+	text-decoration: underline;
+	
+}
+
+.controls{
+	position: fixed;
+	top:50rpx;
+	width: 350rpx;
+}

@@ -1,0 +1,118 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": false,
+		"autoAudits": false,
+		"uglifyFileName": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.10.0",
+	"appid": "wx2013b25b0ff25dc9",
+	"projectname": "bird",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 7,
+			"list": [
+				{
+					"id": 0,
+					"name": "pages/Search/searchList/searchlist",
+					"pathName": "pages/Search/searchList/searchlist",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/AudioDistinguish/AudioResult/audioresult",
+					"pathName": "pages/AudioDistinguish/AudioResult/audioresult",
+					"query": "audioUrl=wxfile://tmp_19914ed10d063b2dc12a7fe8f706a8a2.mp3&data={\"result\":{\"recoID\":\"ac682bb3-27c8-439c-9763-bd62bdaf2ab7\",\"birds\":[{\"similarity\":\"0.99\",\"birdID\":\"\",\"birdName\":\"识别成功.\",\"scientificName\":\"\",\"anotherName\":\"\",\"img\":\"\"}]},\"messageCode\":0,\"message\":\"请求成功\",\"messageType\":0}",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/PhotoDistinguish/PhotoResult/photoresult",
+					"pathName": "pages/PhotoDistinguish/PhotoResult/photoresult",
+					"query": "imgUrl=http://tmp/wx2013b25b0ff25dc9.o6zAJs3Ze23xr5tS_AI8Q1pw2Nks.AOuv3vuw84Yr2fb8cbded49f2f2651b2360d26a2053d.png&recoID= 0c680fca-6c93-4c87-a525-9c22e042b66d",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/PhotoDistinguish/Photo/photo",
+					"pathName": "pages/PhotoDistinguish/Photo/photo",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/Illustrated/BirdData/BirdData",
+					"pathName": "pages/Illustrated/BirdData/BirdData",
+					"query": "birdID=43cc0198-047f-11ea-a25c-e110ae36077d",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/Search/search/search",
+					"pathName": "pages/Search/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/AudioDistinguish/Audio/audio",
+					"pathName": "pages/AudioDistinguish/Audio/audio",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "pages/AudioDistinguish/AudioResult/audioresult",
+					"pathName": "pages/AudioDistinguish/AudioResult/audioresult",
+					"query": "recoID=7f9e9873-fa1f-4882-b721-3782752fc9f0",
+					"scene": null
+				}
+			]
+		}
+	}
+}

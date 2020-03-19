@@ -1,0 +1,38 @@
+<!--pages/Illustrated/IllustratedList/IllustratedList.wxml-->
+  <view class="" style="padding-top:5rpx">
+  </view>
+  <scroll-view  style="flex: 1"    >  
+  <view class="ListBg">
+    <!-- 展示列表 -->
+      <view class="ListShowBox clearfix" >       
+          <view wx:for='{{showList}}' wx:key='{{index}}' class="ListShowItem ">
+            <navigator url="/pages/Illustrated/BirdData/BirdData?birdID={{item.birdID}}" hover-class="none" style="   display: inline-flex;"> 
+              <view class="ListShowImage">
+                <image wx:if='{{item.img==""||item.img==null}}' src="../../../images/searchlist/nullImg.png"></image>
+                <image wx:else src="{{item.img}}"></image>
+              </view>
+              <view class="ListShowData">
+                <view class="ListShowName">
+                  <text>{{item.birdName}}</text>
+                </view>
+                <view  class="ListShowEnName"> 
+                  <text>{{item.scientificName}}</text>
+                </view>
+                <view class="ListShowLaName">
+                  <text>{{item.anotherName}}</text>
+                </view>
+              </view>
+            </navigator>   
+          </view>                
+      </view>
+
+       <!-- 当列表为空时显示结果 -->
+        <view class="noListShow" wx:if='{{showList.length==0}}' style="">
+          <text>没有搜索到相关结果</text>
+        </view>   
+    </view>
+    </scroll-view>
+
+ 
+    
+  <!-- </scroll-view> -->

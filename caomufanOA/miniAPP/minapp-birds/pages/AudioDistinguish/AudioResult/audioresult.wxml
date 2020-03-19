@@ -1,0 +1,67 @@
+<!--pages/AudioDistinguish/AudioResult/audioresult.wxml-->
+<view class="Body" style="height:{{pageHeight}}px;" >
+  <view class="TopData">
+    <view class="voiceAnimation">
+      <block wx:for='{{randomList}}' wx:key='{{index}}'>
+      <!-- {{item}} -->
+        <view 
+          class="colItem "
+          style='height:{{item.height}}rpx;margin-top:-{{item.height/2}}rpx;transition: all {{item.time}}s;left: {{index*4}}px;'></view>    
+        
+      </block>
+    </view>
+    <view class="playerAndior" bindtap="recordingAndPlaying">
+      <text wx:if='{{!playStatus}}'>播放音频</text>
+      <text wx:if='{{playStatus}}'>停止播放</text>
+    </view>
+    
+    
+  </view>
+
+<!-- 结果列表 -->
+  <view class="DataList">
+    <view class="ListShowBox">
+      <scroll-view class="scroll-view_H" scroll-x="true" enable-flex='true'>
+        <block wx:for='{{dataList}}' wx:key='{{index}}'>        
+          <view class="DataItem" bindtap="goDataPage" data-birdID="{{item.birdID}}" data-birdName='{{item.birdName}}'>
+            <!-- <navigator url="/pages/Illustrated/BirdData/BirdData?birdID={{item.birdID}}" hover-class="none" >  -->
+              <view class="DataPhottBox">
+                <view class="dataPhoto">
+                <image wx:if='{{item.img==""||item.img==null}}' src="../../../images/other/bird_Square.png"></image>
+                <image wx:else src="{{item.img}}"></image>
+                  <!-- <image src="{{item.img}}"></image> -->
+                </view>              
+                <view class="dataMore">
+                  <text>查看详情</text>
+                </view>
+              
+              </view>
+            <!-- </navigator> -->
+            <view class="DataShow">
+              <view class="DataNameShow">
+                <view class="DataNameC">
+                  <text>{{item.birdName}}</text>
+                </view>
+                <view class="DataNameEn">
+                  <text>{{item.scientificName}}</text>
+                </view>
+              </view>
+              <view class="DataNumber">
+                <view class="NumberTitle">
+                  <text>声纹相似度</text>
+                </view>
+                <view class="NumberShow">
+                  <text>{{item.similarity+'%'}}</text>
+                </view>
+              </view>
+            </view>
+          </view>       
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="BottomBtn">
+    <button open-type="share">炫耀一下</button>
+  </view>
+</view>

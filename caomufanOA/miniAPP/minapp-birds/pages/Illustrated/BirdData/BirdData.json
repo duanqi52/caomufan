@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+	   "returnIndex":"/components/returnIndex/returnIndex"
+  },
+  "navigationBarTitleText": "详情"
+}

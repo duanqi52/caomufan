@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Illustrated/animalIllustrated/animalIllustrated",
+    "pages/Illustrated/illustratedData/illustratedData",
+    "pages/Illustrated/illustratedList/illustratedList",
+    "pages/Illustrated/plantIllustrated/plantIllustrated",
+    "pages/map/map",
+    "pages/search/search",
+    "components/returnIndex/returnIndex"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#74b113",
+    "navigationBarTitleText": "广东保护平台",
+    "navigationBarTextStyle": "white"
+  },
+  "disableScroll": true,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

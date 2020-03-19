@@ -1,0 +1,93 @@
+//时间标题
+.timeTitle{
+  display: flex;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  background: #f7f7f7;
+  border-bottom: 1px solid #d0d0d0;
+  border-top: 1px solid #d0d0d0;
+  .timeTitleLfet{
+    width: 2.9rem;
+    text-align: center;
+    span{
+      font-size: 0.68rem;
+    }
+  }
+  .timeTitleTxt{
+    width: 4.2rem;
+    a{
+      display: block;
+      background: #fff;
+      margin: 0.2rem auto;
+      width: 100%;
+      height: 0.9rem;
+      line-height: 0.9rem;
+      text-align: center;
+      border-radius: 0.1rem;
+      font-size: 0.4rem;
+      border: 1px solid #d0d0d0;
+    }
+  }
+  .timeTitleRight{
+    width: 2.9rem;
+    text-align: center;
+    span{
+      font-size: 0.68rem;
+    }
+  }
+}
+
+//人数统计
+.peopleTotal{
+  font-size: 0.32rem;
+  display: flex;
+  height: 1.3rem;
+  line-height: 1.3rem;
+  .peopleTotalItem{
+    display: flex;
+    margin-left: 0.48rem;
+  }
+}
+
+//列表
+.listBox{
+  .listTitle{
+    display: flex;
+    background: #4ca824;
+    height: 1.3rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #d0d0d0;
+    border-top: 1px solid #d0d0d0;
+    .listTitleItem{
+      width: 1.66rem;
+      font-size: 0.32rem;
+      color: #fff;
+      span{
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  .listShow{
+
+    .listItem{
+      display: flex;
+      text-align: center;
+      border-bottom: 1px solid #d0d0d0;
+      .itemShow{
+        width: 1.66rem;
+        font-size: 0.32rem;
+        padding: 0.5rem 0;
+        a{
+          color: #4ca824;
+          text-decoration:underline;
+        }
+      }
+    }
+    .listItem:nth-child(even){
+    background: #f7f7f7;
+  }
+  }
+}

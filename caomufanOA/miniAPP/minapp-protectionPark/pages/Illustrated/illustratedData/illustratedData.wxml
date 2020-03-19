@@ -1,0 +1,159 @@
+<!--pages/Illustrated/illustratedData/illustratedData.wxml-->
+<returnIndex ></returnIndex>
+
+<view class="Body">
+
+  <!-- 轮播图 -->
+  <view class="NavBox" >
+    <swiper 
+      style='height:480rpx;!important'
+      circular='true'
+      indicator-color='rgba(255, 229, 229, 0.50)'
+      indicator-active-color='#fff'
+      indicator-dots='true'>
+      <block wx:for='{{imgDataList}}' wx:key='{{item.index}}'>
+        <swiper-item  >
+          <view class="NavImage">
+            <image src="{{item}}" data-list="{{imgDataList}}" data-src="{{item}}" bindtap="imgBig"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 名片 -->
+  <view class="ShowMeBox"  >
+    <view class="ShowMeLeft">
+      <view>
+        <text>{{showData.dataName}}</text>
+      </view>
+       <view>
+        <text class="EnText">{{showData.pinYin}}</text>
+      </view>
+       <view>
+        <text class="EnText">{{showData.scientificName}}</text>
+      </view>      
+    </view>
+    <view class="ShowMeRight">
+      <button open-type="share" hover-class="none">
+        <icon class="iconfont icon-fenxiang"></icon>
+      </button>
+      
+    </view>
+
+  </view>
+
+  <!-- 物种分类 -->
+  <view class="ClassBox"  >
+    <view class="ClassTitleBox">
+      <view class="ClassTitle">
+        <text>物种分类</text>        
+      </view>
+    </view>
+    <view class="ClassListBox">
+      <view class="ClassLeft">
+        <view class="ClassLeftItem">
+          <view class="ClassLeftItemName">
+            <text>目名</text>            
+          </view>
+          <view class="ClassLeftItemShow">
+            <text>{{showData.orderName}}</text>
+          </view>
+        </view>
+        <view class="ClassLeftItem">
+          <view class="ClassLeftItemName">
+            <text>科名</text>
+          </view>
+          <view class="ClassLeftItemShow">
+            <text>{{showData.familyName}}</text>            
+          </view>
+        </view>
+        <view class="ClassLeftItem">
+          <view class="ClassLeftItemName">
+            <text>属名</text>            
+          </view>
+          <view class="ClassLeftItemShow">
+            <text>{{showData.genusName}}</text>            
+          </view>
+        </view>
+      </view>
+      
+    </view>
+
+  </view>
+
+  <!-- 保护等级 -->
+  <view class="LeverBox" >
+    <view class="LeverTitleBox">
+      <view class="LeverTitle">
+        <text>保护等级</text>
+      </view>
+    </view>
+    <view class="LeverListBox">
+      <view class="LeverItem">
+        <view class="LeverItemName">
+          <text>国家保护等级</text>          
+        </view>
+        <view class="LeverItemShow">
+          <text>{{showData.chinaLv}}</text>
+        </view>
+      </view>
+      <view class="LeverItem">
+        <view class="LeverItemName">
+          <text>中国脊椎动物红色名录等级（2015-05）</text>
+        </view>
+        <view class="LeverItemShow">
+          <text>{{showData.cnRedLv}}</text>
+        </view>
+      </view>
+      <view class="LeverItem">
+        <view class="LeverItemName">
+          <text>IUCN等级（2017-03）</text>
+          
+        </view>
+        <view class="LeverItemShow">
+          <text>{{showData.iucnLv}}</text>
+        </view>
+      </view>
+      <view class="LeverItem">
+        <view class="LeverItemName">
+          <text>CITES附录等级</text>
+        </view>
+        <view class="LeverItemShow">
+          <text>{{showData.citesLv}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 详细等级 -->
+  <view class="DataBox">
+    <view class="DataTitleBox">
+      <view class="DataTitle">
+        <text>详细内容</text>
+      </view>
+    </view>
+
+    <view class="DataListBox">
+      <block wx:for='{{showData.details}}' wx:key='{{item.index}}'>
+        <view class="DataItem">
+          <view class="DataItemName">
+            <view class="DataIteamTxt">
+              <text>{{item.title}}</text>
+            </view> 
+            <view class="DataIteamImg">
+              <image src="../../../images/bird.png"></image>
+            </view>          
+          </view>
+          <view class="DataItemShow">
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+      </block>      
+    </view>
+
+  </view> 
+
+</view>
+
+

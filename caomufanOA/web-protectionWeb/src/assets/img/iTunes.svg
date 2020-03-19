@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #658a7f;
+        stroke: #fff;
+        stroke-linejoin: round;
+        stroke-width: 3px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="椭圆_4_拷贝_2" data-name="椭圆 4 拷贝 2" class="cls-1" d="M484.5,535A13.5,13.5,0,1,1,498,521.5,13.5,13.5,0,0,1,484.5,535Zm0-22.5a9,9,0,1,0,9,9A9,9,0,0,0,484.5,512.5Zm0,13.5a4.5,4.5,0,1,1,4.5-4.5A4.5,4.5,0,0,1,484.5,526Z" transform="translate(-467.5 -504.5)"/>
+</svg>

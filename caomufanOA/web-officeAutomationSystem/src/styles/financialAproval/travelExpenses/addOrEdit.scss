@@ -1,0 +1,259 @@
+//部门人员列表上部分按钮
+.companyTitle{
+  height: 50px;
+  line-height: 50px;
+  padding: 0 0 0 30px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  .companyName{
+
+  }
+  .companyBtnBox{
+    padding-right: 30px;
+    display: flex;
+    .companyBtn{
+      cursor: pointer;
+      margin-left: 10px;
+      a{
+        background: #fff;
+        padding: 8px 10px;
+        color: #000;
+        //border-radius: 5px;
+        i{
+          margin-right: 5px;
+          font-size: 24px;
+          vertical-align: middle;
+          line-height: 1px;
+        }
+      }
+      .btn_left{
+        border-left: 1px solid #ddd;
+        color: #4ca824;
+      }
+      .btn_right{
+        border-right: 1px solid #ddd;
+      }
+    }
+  }
+
+}
+
+//表单填取部分
+.formContent{
+  .formBody{
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    .formItem{
+      width: 500px;
+      margin:0px 25px 0 0 ;
+      font-size: 16px;
+      .el-select{
+        width: 390px;
+      }
+    }
+  }
+
+  //明细
+  .detailedBox{
+    border: 1px solid #ddd;
+    margin: 0 30px;
+    .detailTop{
+      height: 46px;
+      line-height: 46px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      .topLeft{
+        padding-left: 20px ;
+        font-size: 16px;
+      }
+      .topRight{
+        padding-right: 20px ;
+        display: flex;
+        i{
+          font-size: 30px;
+          cursor: pointer;
+        }
+      }
+    }
+    .detailContent{
+      padding: 20px 0 10px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      .detailItem{
+        width: 100%;
+        overflow-y: hidden;
+        //overflow-x: auto;
+        padding: 0 0 10px 0;
+        margin: 0 10px 0px 0;
+        table{
+          margin: 0px 0 17px 0;
+          border-collapse: collapse;
+          border: 1px solid #ddd;
+          tr{
+            th{
+              height: 45px;
+              white-space:nowrap;
+              padding: 0 10px;
+
+            }
+            th.detailNum{
+              background: #4ca824;
+              color: #fff;
+            }
+          }
+          tr{
+            td{
+              height: 55px;
+              text-align: center;
+              vertical-align: middle;
+              overflow: hidden;
+              font-size: 14px;
+              input{
+                margin: 0 5px;
+                width: 100px;
+                text-align: center;
+              }
+              input[type="number"]::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+              }
+              input[type="number"]::-webkit-outer-spin-button {
+                -webkit-appearance: none;    /*outer */
+              }
+              textarea{
+                text-align: center;
+                font-size: 14px;
+              }
+            }
+          }
+          .detailNum{
+            width: 40px;
+          }
+          .detailTxt{
+            width: 209px;
+          }
+          .detailmoney{
+            width: 100px;
+          }
+          .detailStatus{
+            width: 110px;
+            .el-radio-group{
+
+              .el-radio{
+                margin-right: 10px;
+              }
+            }
+          }
+          .detailDel{
+            width: 40px;
+            i{
+              color: #f56f6f;
+              font-size: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //备注
+  .remarksBox {
+    border: 1px solid #ddd;
+    margin: 20px 30px;
+    font-size: 16px;
+    .remakeMoney{
+      padding: 0 30px 20px 30px;
+      .remakeMoneyShow{
+        line-height:80px ;
+
+      }
+      .remakeTxt{
+        display: flex;
+        .remakeTxtItem{
+          width: 400px;
+          margin-right: 20px;
+        }
+        .noneInput{
+          width: 200px;
+          height: 40px;
+          background-color: #F5F7FA;
+          color: #C0C4CC;
+          border: 1px solid #E4E7ED;
+          display: inline-block;
+          border-radius: 4px;
+          padding: 0 15px;
+        }
+      }
+    }
+    .remakeMore{
+      display: flex;
+      border-top: 1px solid #ddd;
+
+      .remakePaople{
+        padding:20px 0;
+        line-height: 42px;
+        width: 180px;
+        text-align: center;
+        border-right: 1px solid #ddd;
+      }
+      .remakeNum{
+        line-height: 42px;
+        text-align: center;
+        padding: 20px 20px;
+        border-right: 1px solid #ddd;
+      }
+      .remakeFile{
+        display: flex;
+        line-height: 42px;
+        padding:  20px 0 20px 20px;
+        button{
+          background: #f9f9f9;
+          color: #000;
+          padding: 13px 170px;
+          font-size: 17px;
+          border: 1px solid #d0d0d0;
+          i{
+            font-size: 18px;
+            margin-right: 5px;
+          }
+        }
+        .remakeAccessoriesList{
+
+          padding: 0px 0px 20px 0px;
+          tr{
+            border: 1px solid #ddd;
+            word-break: keep-all;
+            //white-space:nowrap;
+            .bigImg{
+              position: relative;
+            }
+            td{
+              padding: 10px 10px;
+              min-width: 150px;
+              max-width: 400px;
+              text-align: center;
+              overflow: hidden;
+              text-overflow:ellipsis;
+              white-space: nowrap;
+              line-height: 24px;
+              .imgBigBox{
+                position: absolute;
+                top: 10px;
+                left: 10px;
+              }
+
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//日期输入框样式
+.el-date-editor.el-input, .el-date-editor.el-input__inner{
+  width: 390px;
+}

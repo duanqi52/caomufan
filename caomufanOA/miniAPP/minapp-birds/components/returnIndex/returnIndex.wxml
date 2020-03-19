@@ -1,0 +1,12 @@
+<!--components/returnIndex/returnIndex.wxml-->
+<view class="bodyReturn">
+  <view class="returnBtnBox">
+    <navigator url="/pages/index/index"  open-type="reLaunch" >
+      <view class="returnBtnBg"></view>
+      <view class="returnBtn">        
+          <text>返回首页</text>        
+      </view>
+    </navigator>
+  </view>
+</view>
+

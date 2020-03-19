@@ -1,0 +1,11 @@
+<!--components/LoadingBird/loadingbird.wxml-->
+<view wx:if="{{!modalHidden}}"  catchtouchmove="noTouch" class="loadingBody" style="height:{{winHeight}}px">
+    <view class="loadingBox">
+      <view class="loadingGif">
+        <image src="../../images/loading/loadingbird.gif"></image>
+      </view>
+      <view class="loadingText">
+        <text>{{modalText}}</text>
+      </view>
+    </view>
+</view>

@@ -1,0 +1,141 @@
+.bodyBox {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+
+  //左边列表
+  .bodyLeft {
+    width: 300px;
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 65px;
+
+    .leftSearch {
+
+    }
+
+    .leftList {
+      .collapseTitle {
+        font-size: 18px;
+      }
+
+      .itemShow {
+        height: 60px;
+        //line-height: 60px;
+        cursor: pointer;
+        position: relative;
+
+        .itemShowBox {
+          .itemBox {
+            display: flex;
+
+            .itemOne {
+              width: 4px;
+              height: 60px;
+              background: #fff;
+            }
+
+            .changeBtn {
+              width: 30px;
+              text-align: center;
+            }
+
+            .itemDataShow {
+              width: 266px;
+              display: flex;
+
+              .itemIcon {
+                width: 30px;
+                text-align: center;
+
+                i {
+                  font-size: 26px;
+                  line-height: 60px;
+                }
+              }
+
+              .itemName {
+                color: #000000;
+                font-size: 16px;
+                padding: 20px 0;
+                width: 162px;
+              }
+              .itemNum{
+                width: 40px;
+                padding: 21px 0;
+                text-align: right;
+                span{
+                  min-width: 28px;
+                  height: 18px;
+                  background: #e23030;
+                  color: #fff;
+                  text-align: center;
+                  padding: 0 10px;
+                  font-size: 12px;
+                  border-radius: 8px;
+                }
+                .zeroNum{
+                  background:#368115 !important;
+                }
+              }
+            }
+          }
+        }
+
+        .changeBtnPosition {
+          position: absolute;
+          top: 0;
+          left: 12px;
+        }
+
+      }
+
+      .itemShow.active,
+      .itemShow:hover {
+        background: #f0f5ee !important;
+
+        .itemOne {
+          background: #3b9414 !important;
+        }
+
+        .itemIcon {
+          i {
+            color: #3b9414 !important;
+          }
+        }
+
+        .itemName {
+          color: #3b9414 !important;
+        }
+      }
+    }
+  }
+
+  //右边展示
+  .bodyRight {
+    flex: 1;
+    background: #ddd;
+    display: flex;
+    overflow: hidden;
+    z-index: 10;
+
+    .rightCrevice {
+      width: 10px;
+    }
+
+    .rightContent {
+      flex: 1;
+      //overflow: auto;
+      .nowShow{
+        padding: 75px 0 0 0;
+        overflow: auto;
+
+        .nowPage{
+          background: #fff;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+}

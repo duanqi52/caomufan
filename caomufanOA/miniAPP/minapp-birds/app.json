@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Search/search/search",
+    "pages/Search/searchList/searchlist",
+    "pages/AudioDistinguish/Audio/audio",
+    "pages/PhotoDistinguish/Photo/photo",
+    "components/Loading/Loading",
+    "pages/Illustrated/Illustrated/illustrated",
+    "pages/Illustrated/IllustratedList/IllustratedList",
+    "pages/Illustrated/BirdData/BirdData",
+    "pages/AudioDistinguish/AudioResult/audioresult",
+    "pages/PhotoDistinguish/PhotoResult/photoresult"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#74b113",
+    "navigationBarTitleText": "认鸟",
+    "navigationBarTextStyle": "white"
+  },
+  "sitemapLocation": "sitemap.json",
+  "networkTimeout": {
+    "request": 100000,
+    "connectSocket": 100000,
+    "uploadFile": 100000,
+    "downloadFile": 100000
+  }
+}

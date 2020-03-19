@@ -1,0 +1,366 @@
+/* 布局 */
+.ShowBody{
+    width: 100%;
+    min-width: 1080px;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+.TopShow{
+ height: 60px;
+
+  display: flex;
+  justify-content:space-between;
+  line-height: 60px;
+  box-shadow: -10px 0 10px #ddd;
+  z-index: 99;
+}
+.BottomShow{
+  flex: 1;
+  display: flex;
+  position: relative;
+}
+
+.bottomLeft{
+  height: 100%;
+  width: 310px;
+  background: #509729;
+  position: absolute;
+  left: 0;
+  z-index: 99;
+  transition: left 1s;
+
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*-webkit-box-orient:vertical;*/
+  /*-webkit-flex-direction:column;*/
+  /*-ms-flex-direction:column;*/
+  /*flex-direction:column;*/
+
+}
+.bottomRight{
+  flex: 1;
+
+}
+
+
+/* 顶部的数据展示 */
+.TopLogo{
+  line-height: 60px;
+  padding: 0 0 0 18px;
+}
+
+.TopLogo img{
+  vertical-align: middle;
+}
+.TopData{
+display: flex;
+line-height: 60px;
+}
+.TopData .TopAvatar{
+margin-right: 10px;
+}
+.TopData .TopAvatar .TopAvatarImg{
+  vertical-align: middle;
+}
+.TopData .TopLogin{
+  display: flex;
+  font-size: 16px;
+}
+.TopData .TopLogin .LoginName{
+  margin-right: 20px;
+}
+.TopData .TopLogin .LoginBtn{
+  margin-right: 20px;
+}
+.TopData .TopLogin .LoginBtn button{
+  font-size: 16px;
+  color: #313233;
+  text-decoration: underline;
+}
+
+
+/*左边样式*/
+/*搜索部分*/
+.contentSearch{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 310px;
+  z-index: 999;
+  height: 60px;
+  background:#64a831 ;
+}
+.conSearchShow{
+  background: 36px;
+  margin: 12px auto;
+  background: #fff;
+  width: 295px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+}
+.conSearchShow .conSearchInput{
+  width: 255px;
+}
+.conSearchShow .conSearchInput input{
+  width: 225px;
+  padding: 0 15px;
+  height: 36px;
+  border: 0;
+  outline:none;
+  font-size: 16px;
+  line-height: 39px;
+}
+.conSearchShow .sconSearchIcom{
+  width: 40px;
+  line-height: 36px;
+  text-align: center;
+  background: #509729;
+}
+.conSearchShow .sconSearchIcom i{
+  font-size: 22px;
+  color: #fff;
+}
+/*搜索时的联想*/
+.searchSourceBox{
+  position: absolute;
+  top: 52px;
+  left: 7.5px;
+  background: #fff;
+  width: 295px;
+  /*max-height: 400px;*/
+  overflow: auto;
+}
+.searchSourceBox::-webkit-scrollbar {display:none}
+.searchSourceBox li{
+  background: #fff;
+  cursor: pointer;
+  width: 265px;
+  padding: 0 15px;
+  height: 40px;
+  font-size: 16px;
+  line-height: 40px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.searchSourceBox li:hover{
+  background: #ddd;
+}
+.searchSourceBox li.active{
+  background: #ddd;
+}
+
+
+
+.bottomLeft.hiddenNow{
+  left: -310px;
+
+}
+.bottomLeftBox{
+  height: 100%;
+
+}
+.bottomLeftBox .searchInput{
+  height:36px;
+  background: #64a831;
+
+  padding: 12px 0;
+}
+.searchInput .searchInputShow{
+  background: #fff;
+  text-align: center;
+  width: 280px;
+  height: 36px;
+  font-size: 16px;
+  margin:  0px auto;
+  line-height: 36px;
+  border-radius: 5px;
+  color: #313233;
+  display: flex;
+}
+.searchInput .searchInputShow .searchInputText{
+  width: 170px;
+}
+.searchInput .searchInputShow .searchInputIcom{
+  width: 40px;
+}
+.searchInput .searchInputShow .searchInputIcom i{
+  font-size: 16px;
+}
+
+
+
+.searchRaduio{
+  height: 50px;
+  line-height: 50px;
+  padding-left: 16px;
+}
+
+.searchList{
+  flex: 1;
+
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow:auto;
+  flex-grow:0;
+}
+.searchList::-webkit-scrollbar {display:none}
+.searchList .searchListBox{
+background:#509729 ;
+}
+.searchList .topographyTitle{
+  color: #fff;
+  margin-left: 18px;
+  font-size: 16px
+}
+.searchList .topographyList{
+
+}
+.searchList .topographyList .topographyItem{
+height: 54px;
+  color: #fff;
+  padding-left: 20px;
+  font-size: 16px;
+  position: relative;
+  line-height: 54px;
+  width: 270px;
+  cursor: pointer;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.searchList .topographyList .topographyItem.active{
+  color:#ede013 ;
+}
+.searchList .topographyList .topographyItem span{
+  position: absolute;
+  display: block;
+  width: 1px;
+  height: 54px;
+  background: #64a831;
+  left: 20px;
+}
+/*左边列表的隐藏按钮*/
+.leftBtn img{
+  position: absolute;
+  top: 350px;
+  left: 310px;
+  z-index: 99;
+
+  transition: left 2s;
+}
+.leftBtn img.hiddenNow{
+
+  left: -310px;
+
+}
+
+
+/*右边地图样式*/
+.mapBox{
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+.map{
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 图标样式 */
+.mapBtnBox{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  width:60px;
+  height:60px;
+  background: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+.mapBtnBox.active{
+  color:#74b113;
+  border-color: #74b113;
+}
+.mapBtnBox.noclick{
+  color:#ddd;
+  border-color: #ddd;
+}
+.mapBtnBox:first-child{
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.mapBtnBox:last-child{
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+.mapBtn{
+  display: block;
+  text-align: center;
+  font-size: 16px;
+}
+.mapBtn i{
+  font-size:24px;
+}
+
+
+
+
+/* 地图样式按钮 */
+.mapClass{
+  position: absolute;
+  bottom:322px;
+  right: 25px;
+}
+.mapClassList{
+  height: 372px;
+  overflow: hidden;
+
+}
+.mapClassList .mapBtnBox:last-child{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* 地图样式的过渡动画 */
+.draw-enter-active, .draw-leave-active {
+  transition: all 1s ease;
+}
+.draw-enter, .draw-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  height: 0rem;
+}
+
+
+
+/* 图鉴列表样式 */
+.IllustratedList{
+  position: absolute;
+  bottom:192px;
+  right: 25px;
+}
+
+/* 定位列表样式 */
+.positionListPeople{
+  position: absolute;
+  right:  25px;
+  bottom: 50px;
+}
+
+/*卫星图标样式*/
+.positionListSatellite{
+  position: absolute;
+  right:  25px;
+  bottom: 120px;
+}
+
+/* 定位列表样式 */
+.positionList{
+  position: absolute;
+  right:  25px;
+  bottom: 28px;
+}

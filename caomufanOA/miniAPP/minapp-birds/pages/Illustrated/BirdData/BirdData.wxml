@@ -1,0 +1,181 @@
+<!--pages/Illustrated/BirdData/BirdData.wxml-->
+<returnIndex ></returnIndex>
+
+<view class="Body">
+
+  <!-- 轮播图 -->
+  <view class="NavBox" >
+    
+ 
+    <swiper 
+      style='height:480rpx;!important'
+      circular='true'
+      indicator-color='rgba(255, 229, 229, 0.50)'
+      indicator-active-color='#fff'
+      indicator-dots='true'>
+      <block wx:if='{{birdImgList.length>0}}' wx:for='{{birdImgList}}' wx:key='{{item.index}}'>
+        <swiper-item  >
+          <view class="NavImage">
+           <image  wx:if='{{item==""||item==null}}' src="../../../images/searchlist/nullImg.png"  data-list="{{birdImgList}}" data-src="../../../images/searchlist/nullImg.png" bindtap="imgBig"></image>
+            <image wx:else src="{{item}}" data-list="{{birdImgList}}" data-src="{{item}}" bindtap="imgBig"></image>
+          </view>
+        </swiper-item>
+      </block>
+       <block wx:if='{{birdImgList.length<=0}}'>
+        <swiper-item >
+          <view class="NavImage">
+           <image  src="../../../images/searchlist/nullImg.png"  data-list="['../../../images/searchlist/nullImg.png']" data-src="../../../images/searchlist/nullImg.png" bindtap="imgBig"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <!-- 名片 -->
+  <view class="ShowMeBox"  >
+    <view class="ShowMeLeft">
+      <view>
+        <text>{{birdData.birdName}}</text>
+      </view>
+       <view>
+        <text class="EnText"  >{{birdData.pinYin}}</text>
+      </view>
+       <view>
+        <text class="EnText">{{birdData.scientificName}}</text>
+      </view>      
+    </view>
+    <view class="ShowMeRight">
+      <button open-type="share" hover-class="none">
+        <image src="../../../images/Illustrated/BirdData/share.png"></image>
+      </button>
+      
+    </view>
+
+  </view>
+
+  <!-- 物种分类 -->
+  <view class="ClassBox"  >
+    <view class="ClassTitleBox">
+      <view class="ClassTitle">
+        <text>物种分类</text>        
+      </view>
+    </view>
+    <view class="ClassListBox">
+      <view class="ClassLeft">
+        <view class="ClassLeftItem">
+          <view class="ClassLeftItemName" >
+            <text>目名</text>            
+          </view>
+          <view class="ClassLeftItemShow">
+            <text>{{birdData.orderName}}</text>
+          </view>
+        </view>
+        <view class="ClassLeftItem" >
+          <view class="ClassLeftItemName">
+            <text>科名</text>
+          </view>
+          <view class="ClassLeftItemShow">
+            <text>{{birdData.familyName}}</text>            
+          </view>
+        </view>
+        <view class="ClassLeftItem" >
+          <view class="ClassLeftItemName">
+            <text>属名</text>            
+          </view>
+          <view class="ClassLeftItemShow">
+            <text>{{birdData.genusName}}</text>            
+          </view>
+        </view>
+      </view>
+      <view class="ClassRight" >
+      
+        <image hidden="{{!showPlayer}}" src="../../../images/Illustrated/BirdData/shengyin.png" bindtap="playAudio"></image>
+        <image hidden="{{showPlayer}}" src="../../../images/Illustrated/BirdData/zanting.png" bindtap="stopAudio"></image>
+         
+          <view class='progress_box'>
+            <canvas class="progress_canvas cavasbottopm"   canvas-id="canvasProgressbg">  </canvas>
+            <canvas class="progress_canvas cavastop"   canvas-id="canvasProgress">  </canvas>            
+          </view>
+      
+        
+      </view>
+    </view>
+
+  </view>
+
+  <!-- 保护等级 -->
+  <view class="LeverBox" >
+
+
+
+    <view class="LeverTitleBox">
+      <view class="LeverTitle">
+        <text>保护等级</text>
+      </view>
+    </view>
+    <view class="LeverListBox"  >
+      <view class="LeverItem">
+        <view class="LeverItemName">
+          <text>国家保护等级</text>          
+        </view>
+        <view class="LeverItemShow">
+          <text>{{birdData.chinaLv}}</text>
+        </view>
+      </view>
+      <view class="LeverItem" >
+        <view class="LeverItemName">
+          <text>中国脊椎动物红色名录等级（2015-05）</text>
+        </view>
+        <view class="LeverItemShow">
+          <text>{{birdData.cnRedLv}}</text>
+        </view>
+      </view>
+      <view class="LeverItem" >
+        <view class="LeverItemName">
+          <text>IUCN等级（2017-03）</text>
+          
+        </view>
+        <view class="LeverItemShow">
+          <text>{{birdData.iucnLv}}</text>
+        </view>
+      </view>
+      <view class="LeverItem" >
+        <view class="LeverItemName">
+          <text>CITES附录等级</text>
+        </view>
+        <view class="LeverItemShow">
+          <text>{{birdData.citesLv}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 详细等级 -->
+  <view class="DataBox" wx:if='{{birdData.details.length>0}}'>
+    <view class="DataTitleBox">
+      <view class="DataTitle">
+        <text>详细内容</text>
+      </view>
+    </view>
+
+    <view class="DataListBox">
+      <block wx:for='{{birdData.details}}' wx:key='{{item.index}}'>
+        <view class="DataItem">
+          <view class="DataItemName">
+            <view class="DataIteamTxt">
+              <text>{{item.title}}</text>
+            </view> 
+            <view class="DataIteamImg">
+              <image src="../../../images/Illustrated/BirdData/bird.png"></image>
+            </view>          
+          </view>
+          <view class="DataItemShow">
+            <text>{{item.content}}</text>
+          </view>
+        </view>
+      </block>      
+    </view>
+
+  </view> 
+
+</view>

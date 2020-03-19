@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "LoadingBird":"/components/LoadingBird/loadingbird"
+  }
+}

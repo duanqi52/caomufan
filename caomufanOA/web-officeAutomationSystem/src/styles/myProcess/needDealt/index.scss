@@ -1,0 +1,136 @@
+
+//头部输入部分
+.topContent{
+  //height: 80px;
+  padding: 20px 28px;
+  display: flex;
+  .topItem{
+    line-height: 40px;
+    display: flex;
+    margin: 0 35px 0 0;
+    .topName{
+      width: 70px ;
+      font-size: 16px;
+    }
+    .topList{
+      .el-date-editor{
+        width: 270px;
+        padding: 3px 0;
+        .el-input__icon{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+//表格列表、
+.listContent{
+  //width: 1555px;
+  margin: 0 20px;
+  //标题
+  .listTitle{
+    display: flex;
+    height: 62px;
+    line-height: 62px;
+    background: #f0f5ee;
+    justify-content: center;
+    align-items: center;
+    padding: 11px 0;
+    line-height: 40px;
+    .listTitleItem{
+
+      text-align: center;
+      border-left: 1px solid #c6d8bf;
+      height: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      display: block;
+    }
+    .listTitleItem:first-child{
+      border: none;
+    }
+  }
+  //表格的列表
+  .listShowBox{
+    .listShowItem{
+      //padding: 32px 0;
+      height: 140px;
+      display: flex;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      position: relative;
+      margin: 10px 0;
+      box-shadow: 0 0 10px #ddd;
+      .showItem{
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        //padding: 0 16px;
+        .moreData{
+          color: #4ca824;
+          text-decoration: underline ;
+          cursor: pointer;
+        }
+        .listBtn{
+          display: flex;
+          overflow: hidden;
+          a{
+            margin: 10px 0;
+            width: 90px;
+            height: 36px;
+            display: inline-block;
+            color: #fff;
+            line-height: 36px;
+            border-radius: 5px;
+            cursor: pointer;
+          }
+          .listBtnY{
+            background: #3b9414;
+            margin-right: 15px;
+          }
+          .listBtnN{
+            background: #e23030;
+          }
+        }
+
+      }
+      .showIteamStatus{
+        position: absolute;
+        top: -5px;
+        left: -5px;
+      }
+      .showIteamMy{
+        position: absolute;
+        top: -0px;
+        right: 0px;
+      }
+    }
+    .listShowItem:nth-child(odd){
+      background: #fbfbfb;
+    }
+  }
+  //列表中的另设宽度
+  .title1{
+    width: 316px;
+    padding: 0 20px;
+  }
+  .title2{
+    width: 392px;
+  }
+  .title3{
+    width: 511px;
+  }
+  .title4{
+    width: 296px;
+  }
+}
+
+
+.pageNumBox{
+  margin: 20px 10px;
+  display: flex;
+  justify-content: flex-end;
+}

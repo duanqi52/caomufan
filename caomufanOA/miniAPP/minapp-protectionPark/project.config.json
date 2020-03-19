@@ -1,0 +1,95 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": false,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wxa3d03f635633d11f",
+	"projectname": "protectionPark",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/search/search",
+					"pathName": "pages/search/search",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "pages/Illustrated/illustratedList/illustratedList",
+					"pathName": "pages/Illustrated/illustratedList/illustratedList",
+					"query": "type=animall&more=no",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/Illustrated/animalIllustrated/animalIllustrated",
+					"pathName": "pages/Illustrated/animalIllustrated/animalIllustrated",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "pages/Illustrated/illustratedData/illustratedData",
+					"pathName": "pages/Illustrated/illustratedData/illustratedData",
+					"query": "type=animall&itemID =123",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/map/map",
+					"pathName": "pages/map/map",
+					"query": "type=animall&itemID =123",
+					"scene": null
+				}
+			]
+		}
+	}
+}
